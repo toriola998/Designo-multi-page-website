@@ -33,7 +33,7 @@ export default {
         border: 0;
     }
 
-    h1 {
+    h1, h2 {
         font-weight: 500;
     }
 
