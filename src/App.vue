@@ -23,6 +23,10 @@ export default {
         font-family: 'Jost', sans-serif;
     }
 
+    :root {
+        --color-black: #333136;
+    }
+
     button {
         background-color: transparent;
         outline: 0;
@@ -30,10 +34,10 @@ export default {
     }
 
     h1 {
-        font-size: 500;
+        font-weight: 500;
     }
 
     p {
-        font-size: 400;
+        font-weight: 400;
     }
 </style>
