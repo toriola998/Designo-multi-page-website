@@ -12,25 +12,31 @@
         </div>
     </header>
     <main>
-        <section aria-label="Services we render in Designo">
-            
+        <section aria-label="Services we render in Designo"> 
             <div class="services">
                 <div class="web-design design">
-                    <div class="overlay">
-                        <div>
-                            <h2>WEB DESIGN</h2>
-                            <p aria-label="view web design projects">VIEW PROJECTS 
-                                <span>
-                                    <img src="./../assets/shared/desktop/icon-right-arrow.svg" alt=""/>
-                                </span>
-                            </p>
-                        </div>
-                    </div>
+                    <OurServices service="WEB DESIGN" service-info="view web design projects" />
+                </div>
+                <div class="app-design design">
+                    <OurServices service="APP DESIGN" service-info="view application design projects" />
+                </div>
+                <div class="graphic-design design">
+                    <OurServices service="GRAPHIC DESIGN" service-info="view web design projects" />
                 </div>
             </div>
         </section>
     </main>
 </template>
+
+<script>
+import OurServices from './../components/OurServices.vue'
+export default {
+    name: "Home",
+    components: {
+        OurServices,
+    }
+}
+</script>
 
 <style lang="scss" scoped>
     @mixin flex($flex_center: center) {
@@ -59,7 +65,7 @@
             img {
                 width: 100%;
                 margin-bottom: -0.4rem;
-                filter: drop-shadow(20px -40px 80px rgba(93, 2, 2, 0.497569));
+                filter: drop-shadow(20px -40px 50px rgba(93, 2, 2, 0.497569));
             }
 
             a {
@@ -76,47 +82,29 @@
     }
 
     .services {
-        padding: 4rem 1.5rem;
+        padding: 6rem 1.5rem;
     }
 
     .design {
         position: relative;
-    }
-
-    .web-design {
-        background-image: url("./../assets/home/mobile/image-web-design.jpg");
         background-color: grey;
         background-repeat: no-repeat;
         background-size: cover;
         height: 250px;
         width: 100%;
-        border-radius: 15px;   
+        border-radius: 15px; 
+        margin-bottom: 1.3rem;  
     }
 
-    .overlay  {
-        background: rgba(0, 0, 0, 0.6);
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        border-radius: 15px;
-        @include flex;
+    .web-design {
+        background-image: url("./../assets/home/mobile/image-web-design.jpg");
+    }
 
-            div {
-                z-index: 999;
-                color: #fff;
-            }
+    .app-design {
+        background-image: url("./../assets/home/mobile/image-app-design.jpg");
+    }
 
-            h2 {
-                letter-spacing: 2px;
-                font-size: 2rem;
-                margin-bottom: .6rem;
-            }
-
-            p {
-                text-align: center;
-                letter-spacing: 7px;
-            }
+    .graphic-design {
+        background-image: url("./../assets/home/mobile/image-graphic-design.jpg");
     }
 </style>
