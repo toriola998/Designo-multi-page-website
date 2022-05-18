@@ -6,7 +6,7 @@
                 <p>With over 10 years in the industry, we are experienced in creating 
                 fully responsive websites, app design, and engaging brand experiences. 
                 Find out more about our services.</p>
-                <a aria-label="Learn more about Designo">LEARN MORE</a>
+                <WhiteButton buttonRole="Learn more about Designo" callToAction="LEARN MORE" />
             </div>
             <img src="./../assets/home/mobile/image-hero-mobile.png"  class="hero-image" alt=""/>  
         </div>
@@ -53,12 +53,14 @@
 
 <script>
 import OurServices from './../components/OurServices.vue'
+import WhiteButton from './../components/WhiteButton.vue'
 import WhyChooseUs from './../components/WhyChooseUs.vue'
 
 export default {
     name: "Home",
     components: {
         OurServices,
+        WhiteButton,
         WhyChooseUs
     }
 }
@@ -90,20 +92,8 @@ export default {
 
             img {
                 width: 100%;
-                margin-bottom: -0.4rem;
+                margin: 5rem 0 -0.4rem 0;
                 filter: drop-shadow(20px -40px 50px rgba(93, 2, 2, 0.497569));
-            }
-
-            a {
-                @include flex;
-                background-color: #fff;
-                color: var(--black-color);
-                font-weight: 500;
-                font-size: .85rem;
-                margin: 0 auto 5rem;
-                border-radius: 5px;
-                width: 8rem;
-                height: 3rem;       
             }
     }
 
