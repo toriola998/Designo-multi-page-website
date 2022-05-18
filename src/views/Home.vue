@@ -15,14 +15,37 @@
         <section aria-label="Services we render in Designo"> 
             <div class="services">
                 <div class="web-design design">
-                    <OurServices service="WEB DESIGN" service-info="view web design projects" />
+                    <OurServices service="WEB DESIGN" serviceInfo="view web design projects" />
                 </div>
                 <div class="app-design design">
-                    <OurServices service="APP DESIGN" service-info="view application design projects" />
+                    <OurServices service="APP DESIGN" serviceInfo="view application design projects" />
                 </div>
                 <div class="graphic-design design">
-                    <OurServices service="GRAPHIC DESIGN" service-info="view web design projects" />
+                    <OurServices service="GRAPHIC DESIGN" serviceInfo="view web design projects" />
                 </div>
+            </div>
+        </section>
+
+        <section aria-label="Why you should choose designo">
+            <div class="why-choose-wrapper">
+                <WhyChooseUs illustration="./../assets/home/desktop/illustration-passionate.svg"
+                            title="PASSIONATE"
+                            notes="Each project starts with an in-depth brand research to ensure
+                            we only create products that serve a purpose. We merge art, design, and
+                            technology into exciting new solutions." 
+                />
+                <WhyChooseUs illustration="./../assets/home/desktop/illustration-resourceful.svg"
+                            title="RESOURCEFUL"
+                            notes="Everything that we do has a strategic purpose. We use an agile 
+                            approach in all of our projects and value customer collaboration. It guarantees 
+                            superior results that fulfill our clients' needs." 
+                />
+                <WhyChooseUs illustration="./../assets/home/desktop/illustration-friendly.png"
+                            title="FRIENDLY"
+                            notes=" We are a group of enthusiastic folks who know how to put people
+                            first. Our success depends on our customers, and we strive to give them 
+                            the best experience a company can provide." 
+                />
             </div>
         </section>
     </main>
@@ -30,10 +53,13 @@
 
 <script>
 import OurServices from './../components/OurServices.vue'
+import WhyChooseUs from './../components/WhyChooseUs.vue'
+
 export default {
     name: "Home",
     components: {
         OurServices,
+        WhyChooseUs
     }
 }
 </script>
@@ -106,5 +132,9 @@ export default {
 
     .graphic-design {
         background-image: url("./../assets/home/mobile/image-graphic-design.jpg");
+    }
+
+    .why-choose-wrapper {
+        padding: 0 1.5rem;
     }
 </style>

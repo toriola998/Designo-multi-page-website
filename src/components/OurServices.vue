@@ -2,7 +2,7 @@
     <div class="overlay">
         <div>
             <h2> {{ service }} </h2>
-            <p :aria-label="service-info">VIEW PROJECTS 
+            <p :aria-label="serviceInfo">VIEW PROJECTS 
                 <span>
                     <img src="./../assets/shared/desktop/icon-right-arrow.svg" alt=""/>
                 </span>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-    props: ['service', 'service-info']
+    props: ['service', 'serviceInfo']
 }
 </script>
 
