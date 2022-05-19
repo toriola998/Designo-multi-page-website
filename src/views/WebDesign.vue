@@ -1,6 +1,12 @@
 <template>
     <div>
-        <ServicesHeader />
+        <header>
+            <ServicesHeader title="Web design"
+                            description="We build websites that serve as powerful marketing tools
+                            and bring memorable brand experiences."/>
+        </header>
+        
+        <main>
         <section aria-label="some of the web designs done by Designo">
             <div class="projects-wrapper">
                 <ProjectDetails projectImage="image-express.jpg"
@@ -46,6 +52,7 @@
                 </div>
             </div>
         </section>
+        </main>
     </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="each-project">
-            <img :src="require(`./../assets/web-design/desktop/${projectImage}`)" 
+            <img :src="require(`./../assets/${projectImage}`)" 
                  :alt="projectAltText"/>
             <div class="bg-peach">
                 <h2> {{projectName}} </h2>
