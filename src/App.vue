@@ -43,4 +43,8 @@ export default {
     p {
         font-weight: 400;
     }
+
+    ul {
+        list-style-type: none;
+    }
 </style>
