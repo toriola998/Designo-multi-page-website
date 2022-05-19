@@ -88,7 +88,10 @@ export default {
                 text-align: center;
             }
 
-            p { padding: 1rem 0; }
+            p { 
+                padding: 1rem 0;
+                line-height: 1.8;
+             }
 
             img {
                 width: 100%;
