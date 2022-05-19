@@ -28,6 +28,8 @@ export default {
 
     :root {
         --color-black: #333136;
+        --light-peach: #FDF3F0;
+        --dark-peach: #E7816B;
     }
 
     button {

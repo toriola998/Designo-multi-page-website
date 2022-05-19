@@ -1,9 +1,9 @@
 <template>
     <div class="bg-pattern-header">
         <div>
-        <h1>Web design</h1>
-        <p>We build websites that serve as powerful marketing tools
-             and bring memorable brand experiences.</p>
+            <h1>Web design</h1>
+            <p>We build websites that serve as powerful marketing tools
+                and bring memorable brand experiences.</p>
         </div>
     </div>
 </template>
