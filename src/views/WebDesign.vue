@@ -1,63 +1,38 @@
 <template>
     <div>
         <ServicesHeader />
-        <section>
+        <section aria-label="some of the web designs done by Designo">
             <div class="projects-wrapper">
-                <div class="each-project">
-                    <img src="./../assets/web-design/desktop/image-express.jpg" 
-                        alt="" 
-                        />
-                    <ProjectDetails projectName="EXPRESS" 
-                                    projectInfo="A multi-carrier shipping website for ecommerce businesses" />
-                </div>
-
-                <div class="each-project">
-                    <img src="./../assets/web-design/desktop/image-transfer.jpg" 
-                        alt="" 
-                        />
-                    <ProjectDetails projectName="TRANSFER" 
-                                    projectInfo="Site for low-cost money transfers and sending money within seconds" />
-                </div>
-
-                <div class="each-project">
-                    <img src="./../assets/web-design/desktop/image-express.jpg" 
-                        alt="" 
-                        />
-                    <ProjectDetails projectName="EXPRESS" 
-                                    projectInfo="A multi-carrier shipping website for ecommerce businesses" />
-                </div>
-
-                <div class="each-project">
-                    <img src="./../assets/web-design/desktop/image-photon.jpg" 
-                        alt="" 
-                        />
-                    <ProjectDetails projectName="PHOTON" 
-                                    projectInfo="A state-of-the-art music player with high-resolution audio and DSP effects" />
-                </div>
-
-                <div class="each-project">
-                    <img src="./../assets/web-design/desktop/image-builder.jpg" 
-                        alt="" 
-                        />
-                    <ProjectDetails projectName="BUILDER" 
-                                    projectInfo="Connects users with local contractors based on their location" />
-                </div>
-
-                <div class="each-project">
-                    <img src="./../assets/web-design/desktop/image-blogr.jpg" 
-                        alt="" 
-                        />
-                    <ProjectDetails projectName="BLOGR" 
-                                    projectInfo="Blogr is a platform for creating an online blog or publication" />
-                </div>
-
-                 <div class="each-project">
-                    <img src="./../assets/web-design/desktop/image-camp.jpg" 
-                        alt="" 
-                        />
-                    <ProjectDetails projectName="CAMP" 
-                                    projectInfo="Get expert training in coding, data, design, and digital marketing" />
-                </div>
+                <ProjectDetails projectImage="image-express.jpg"
+                                projectName="EXPRESS" 
+                                projectInfo="A multi-carrier shipping website for ecommerce businesses" 
+                                projectAltText="Screenshot of interface of the Express website"
+                            />
+                <ProjectDetails projectImage="image-transfer.jpg"
+                                projectName="TRANSFER" 
+                                projectInfo="Site for low-cost money transfers and sending money within seconds" 
+                                projectAltText="Screenshot of interface of the Transfer website" 
+                            />
+                <ProjectDetails projectImage="image-photon.jpg"
+                                projectName="PHOTON" 
+                                projectInfo="A state-of-the-art music player with high-resolution audio and DSP effects" 
+                                projectAltText="Screenshot of interface of the Photon website" 
+                            />
+                <ProjectDetails projectImage="image-builder.jpg"
+                                projectName="BUILDER" 
+                                projectInfo="Connects users with local contractors based on their location" 
+                                projectAltText="Screenshot of interface of the Builder website" 
+                            />
+                <ProjectDetails projectImage="image-blogr.jpg"
+                                projectName="BLOGR" 
+                                projectInfo="Blogr is a platform for creating an online blog or publication" 
+                                projectAltText="Screenshot of interface of the Blogr website" 
+                            />
+                <ProjectDetails projectImage="image-camp.jpg"
+                                projectName="CAMP" 
+                                projectInfo="Get expert training in coding, data, design, and digital marketing" 
+                                projectAltText="Screenshot of interface of the Camp website" 
+                            />
             </div>
         </section> 
     </div>

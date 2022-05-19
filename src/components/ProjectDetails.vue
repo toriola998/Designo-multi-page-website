@@ -1,19 +1,34 @@
 <template>
     <div>
-        <div class="bg-peach">
-            <h2> {{projectName}} </h2>
-            <p>{{projectInfo}} </p>
+        <div class="each-project">
+            <img :src="require(`./../assets/web-design/desktop/${projectImage}`)" 
+                 :alt="projectAltText"/>
+            <div class="bg-peach">
+                <h2> {{projectName}} </h2>
+                <p>{{projectInfo}} </p>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['projectName', 'projectInfo']
+    props: ['projectImage', 'projectAltText', 'projectName', 'projectInfo']
 }
 </script>
 
 <style lang="scss" scoped>
+    .each-project {
+        margin-top: 2rem;
+
+        img {
+            display: block;
+            width: 100%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px ;
+        }
+    }
+
     .bg-peach {
         background-color: var(--light-peach);
         padding: 2rem 1.5rem;
