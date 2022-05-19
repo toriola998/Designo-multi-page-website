@@ -1,12 +1,16 @@
 <template>
     <div>
-        <h1>Hello </h1>
+        <ServicesHeader />
     </div>
 </template>
 
 <script>
+import ServicesHeader from './../components/ServicesHeader.vue'
 export default {
     name: 'Web Design',
+    components: {
+        ServicesHeader
+    }
 }
 </script>
 
