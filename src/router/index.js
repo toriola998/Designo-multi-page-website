@@ -1,6 +1,7 @@
 import {createRouter, createWebHistory} from 'vue-router'
 
 import Home from './../views/Home.vue'
+import WebDesign from './../views/WebDesign.vue'
 
 const router = createRouter({
     history:  createWebHistory(),
@@ -16,6 +17,12 @@ const router = createRouter({
             path: '/',
             name: 'Home',
             component: Home
+        },
+
+        {
+            path: '/web-design',
+            name: 'Web Design',
+            component: WebDesign
         }
     ]
 })
