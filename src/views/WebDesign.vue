@@ -35,17 +35,30 @@
                             />
             </div>
         </section> 
+
+        <section aria-label="Other services we render at Designo">
+            <div class="our-services">
+                <div class="app-design design">
+                    <OurServices service="APP DESIGN" serviceInfo="view application design projects" />
+                </div>
+                <div class="graphic-design design">
+                    <OurServices service="GRAPHIC DESIGN" serviceInfo="view web design projects" />
+                </div>
+            </div>
+        </section>
     </div>
 </template>
 
 <script>
 import ServicesHeader from './../components/ServicesHeader.vue';
-import ProjectDetails from '../components/ProjectDetails.vue'
+import ProjectDetails from '../components/ProjectDetails.vue';
+import OurServices from '../components/OurServices.vue'
 export default {
     name: 'Web Design',
     components: {
         ServicesHeader,
-        ProjectDetails
+        ProjectDetails,
+        OurServices
     }
 }
 </script>
@@ -64,5 +77,9 @@ export default {
             border-top-left-radius: 15px;
             border-top-right-radius: 15px ;
         }
+    }
+
+    .our-services {
+        padding: 6rem 1.5rem 0;
     }
 </style>

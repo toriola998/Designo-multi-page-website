@@ -92,7 +92,7 @@ export default {
                 padding: 1rem 0;
                 line-height: 1.8;
              }
-
+ 
             img {
                 width: 100%;
                 margin: 5rem 0 -0.4rem 0;
