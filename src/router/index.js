@@ -3,6 +3,7 @@ import {createRouter, createWebHistory} from 'vue-router'
 import Home from './../views/Home.vue'
 import WebDesign from './../views/WebDesign.vue'
 import GraphicDesign from './../views/GraphicDesign.vue'
+import AppDesign from './../views/AppDesign.vue'
 
 const router = createRouter({
     history:  createWebHistory(),
@@ -30,6 +31,12 @@ const router = createRouter({
             path: '/graphic-design',
             name: 'Graphic Design',
             component: GraphicDesign
+        },
+
+        {
+            path: '/app-design',
+            name: 'App Design',
+            component: AppDesign
         }
     ]
 })
