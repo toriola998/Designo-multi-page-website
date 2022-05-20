@@ -67,11 +67,9 @@ export default {
     }
 
     .bg-pattern-footer {
+        @include bgImage;
         background-image: url("./../assets/shared/desktop/bg-pattern-call-to-action.svg"); /* The image used */
-        background-color: #E7816B;
-        background-repeat: no-repeat;
         background-position: center;
-        width: 100%;
         padding: 3rem 1.5rem;
         border-radius: 15px;
         margin-bottom: -12rem;

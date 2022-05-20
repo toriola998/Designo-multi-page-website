@@ -12,16 +12,14 @@
     line-height: 1.8;
 }
 
-@mixin light-bg ($bg-image: url("./../assets/shared/desktop/bg-pattern-two-circles.svg")) {
-    background-image: $bg-image;
-    background-color: var(--light-peach);
-    background-repeat: no-repeat;
-    width: 100%;
-    padding: 4rem 1.5rem;
-}
-
 @mixin flex($flex_position: center) {
     justify-content: $flex_position;
     display: flex;
     align-items: center;
+}
+
+@mixin bgImage ($bg-color: #E7816B) {
+    background-color: $bg-color;
+    background-repeat: no-repeat;
+    width: 100%;
 }

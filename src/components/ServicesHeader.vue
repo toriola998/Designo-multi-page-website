@@ -17,14 +17,13 @@ export default {
 @import './../assets/scss/partials/_partial.scss';
 
     .bg-pattern-header {
+        @include flex;
+        @include bgImage;
         background-image: url("./../assets/shared/desktop/bg-pattern-small-circle.svg");
-        background-color: #E7816B;
-        background-repeat: no-repeat;
         background-size: cover;
-        width: 100%;
         height: 320px;
         padding: 0 1.5rem;
-        @include flex;
+        
 
         h1, p {
             @extend %align-white-text;

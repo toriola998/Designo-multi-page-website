@@ -70,24 +70,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import './../assets/scss/partials/_partial.scss';
     .home-container {
-        background-image: url("./../assets/home/desktop/bg-pattern-hero-home.svg"); /* The image used */
-        background-color: #E7816B;
-        background-repeat: no-repeat;
+        @include bgImage;
+        background-image: url("./../assets/home/desktop/bg-pattern-hero-home.svg"); 
         background-size: cover;
-        width: 100%;
         padding: 4rem 1.5rem 0;
         
             h1 { line-height: 1.1; }
 
             h1, p {
-                color: #fff;
-                text-align: center;
+                @extend %align-white-text;
             }
 
             p { 
                 padding: 1rem 0;
-                line-height: 1.8;
+                @extend %paragraph-height;
              }
  
             img {

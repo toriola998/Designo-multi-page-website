@@ -23,10 +23,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @import './../assets/scss/partials/_light-bg-pattern.scss';
+@import './../assets/scss/partials/_partial.scss';
 
    .light-bg-pattern {
-       @include bg;
+       @include bgImage($bg-color: var(--light-peach));
+       background-image: url("./../assets/shared/desktop/bg-pattern-two-circles.svg");
+       padding: 4rem 1.5rem;
     }
 
     .map {

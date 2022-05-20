@@ -18,11 +18,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import './../assets/scss/partials/_partial.scss';
     .each-project {
         margin-top: 2rem;
 
         img {
-            @extend %%image-block;
+            @extend %image-block;
             border-top-left-radius: 15px;
             border-top-right-radius: 15px ;
         }

@@ -20,7 +20,9 @@ export default {
     }
     
     .about-bg {
-       @include light-bg($bg-image: url("./../assets/shared/desktop/bg-pattern-two-circles.svg") );
+       @include bgImage($bg-color: var(--light-peach));
+       background-image: url("./../assets/shared/desktop/bg-pattern-two-circles.svg");
+       padding: 4rem 1.5rem;
     }
 
     h2 {

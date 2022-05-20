@@ -36,24 +36,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './../assets/scss/partials/_bg-image.scss';
+@import './../assets/scss/partials/_partial.scss';
     img {
         width: 100%;
         display: block;
     }
     
     .about {
-       @include backgroundImage;
+       @include bgImage;
+       background-size: cover;
        background-image: url("./../assets/about/mobile/bg-pattern-hero-about-mobile.svg");
        padding: 4rem 1.5rem;
 
        h1, p {
-           text-align: center;
-           color: #fff;
+           @extend %align-white-text;
        }
 
        p {
-           line-height: 1.8;
+           @extend %paragraph-height;
            padding-top: 2rem;
        }
     }
