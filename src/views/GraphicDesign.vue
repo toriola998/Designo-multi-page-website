@@ -40,9 +40,11 @@
 
 <script>
 import ProjectDetails from './../components/ProjectDetails.vue';
+import ServicesHeader from './../components/ServicesHeader.vue'
 import OurServices from './../components/OurServices.vue'
 export default {
    components: {
+       ServicesHeader,
        ProjectDetails,
        OurServices
    }
@@ -50,11 +52,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .projects-wrapper {
-        padding: 4rem 1.5rem 0;
-    }
-
-    .our-services {
-        padding: 6rem 1.5rem 0;
-    }
 </style>

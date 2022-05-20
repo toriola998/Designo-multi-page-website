@@ -50,4 +50,8 @@ export default {
                 letter-spacing: 7px;
             }
     }
+
+    .overlay:hover {
+        background: var(--light-peach)     
+    }
 </style>

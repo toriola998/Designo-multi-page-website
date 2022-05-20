@@ -14,9 +14,11 @@
     <main>
         <section aria-label="Services we render in Designo"> 
             <div class="services">
-                <div class="web-design design">
+                <!--<router-link to="/web-design">-->
+                <div class="web-design design" @click="this.$router.push({ path: '/web-design'})">
                     <OurServices service="WEB DESIGN" serviceInfo="view web design projects" />
                 </div>
+                <!--</router-link>-->
                 <div class="app-design design">
                     <OurServices service="APP DESIGN" serviceInfo="view application design projects" />
                 </div>
@@ -102,29 +104,6 @@ export default {
 
     .services {
         padding: 6rem 1.5rem;
-    }
-
-    .design {
-        position: relative;
-        background-color: grey;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 250px;
-        width: 100%;
-        border-radius: 15px; 
-        margin-bottom: 1.3rem;  
-    }
-
-    .web-design {
-        background-image: url("./../assets/home/mobile/image-web-design.jpg");
-    }
-
-    .app-design {
-        background-image: url("./../assets/home/mobile/image-app-design.jpg");
-    }
-
-    .graphic-design {
-        background-image: url("./../assets/home/mobile/image-graphic-design.jpg");
     }
 
     .why-choose-wrapper {

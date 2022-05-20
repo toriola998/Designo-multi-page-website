@@ -61,6 +61,10 @@ export default {
         margin-bottom: 1.3rem;  
     }
 
+    .design:hover {
+        background-color: red;   
+    }
+
     .web-design {
         background-image: url("./assets/home/mobile/image-web-design.jpg");
     }
@@ -71,5 +75,13 @@ export default {
 
     .graphic-design {
         background-image: url("./assets/home/mobile/image-graphic-design.jpg");
+    }
+
+    .projects-wrapper {
+        padding: 4rem 1.5rem 0;
+    }
+
+    .our-services {
+        padding: 6rem 1.5rem 0;
     }
 </style>
