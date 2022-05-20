@@ -5,6 +5,7 @@ import WebDesign from './../views/WebDesign.vue'
 import GraphicDesign from './../views/GraphicDesign.vue'
 import AppDesign from './../views/AppDesign.vue'
 import OurLocations from './../views/OurLocations.vue'
+import AboutUs from './../views/AboutUs.vue'
 
 const router = createRouter({
     history:  createWebHistory(),
@@ -44,6 +45,12 @@ const router = createRouter({
             path: '/locations',
             name: 'Locations',
             component: OurLocations
+        },
+
+        {
+            path: '/about-us',
+            name: 'About Us',
+            component: AboutUs
         }
     ]
 })
