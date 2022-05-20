@@ -30,7 +30,6 @@
 </template>
 
 <script>
-
 import EachLocation from './../components/EachLocation.vue'
 export default {
     name: 'Locations',

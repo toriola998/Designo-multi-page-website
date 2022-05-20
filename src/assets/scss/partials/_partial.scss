@@ -1,0 +1,21 @@
+%image-block {
+    width: 100%;
+    display: block;
+}
+
+%align-white-text {
+   color: #fff;
+   text-align: center;
+}
+
+%paragraph-height {
+    line-height: 1.8;
+}
+
+@mixin light-bg ($bg-image: url("./../assets/shared/desktop/bg-pattern-two-circles.svg")) {
+    background-image: $bg-image;
+    background-color: var(--light-peach);
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 4rem 1.5rem;
+}

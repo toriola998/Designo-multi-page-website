@@ -70,12 +70,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @mixin flex($flex_center: center) {
-       justify-content: $flex_center;
-       display: flex;
-       align-items: center;
-    }
-
     .home-container {
         background-image: url("./../assets/home/desktop/bg-pattern-hero-home.svg"); /* The image used */
         background-color: #E7816B;
