@@ -52,6 +52,6 @@ export default {
     }
 
     .overlay:hover {
-        background: var(--light-peach)     
+        background:rgba(231, 129, 107, 0.6);    
     }
 </style>

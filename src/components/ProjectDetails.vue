@@ -50,4 +50,13 @@ export default {
             margin-top: 1rem;
         }
     }
+
+    .bg-peach:hover {
+        color: #fff;
+        background-color: var(--dark-peach);
+
+        h2 {
+            color: #fff;
+        }
+    }
 </style>>

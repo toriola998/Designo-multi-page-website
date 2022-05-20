@@ -61,10 +61,6 @@ export default {
         margin-bottom: 1.3rem;  
     }
 
-    .design:hover {
-        background-color: red;   
-    }
-
     .web-design {
         background-image: url("./assets/home/mobile/image-web-design.jpg");
     }
