@@ -4,6 +4,7 @@ import Home from './../views/Home.vue'
 import WebDesign from './../views/WebDesign.vue'
 import GraphicDesign from './../views/GraphicDesign.vue'
 import AppDesign from './../views/AppDesign.vue'
+import OurLocations from './../views/OurLocations.vue'
 
 const router = createRouter({
     history:  createWebHistory(),
@@ -37,6 +38,12 @@ const router = createRouter({
             path: '/app-design',
             name: 'App Design',
             component: AppDesign
+        },
+
+        {
+            path: '/locations',
+            name: 'Locations',
+            component: OurLocations
         }
     ]
 })
