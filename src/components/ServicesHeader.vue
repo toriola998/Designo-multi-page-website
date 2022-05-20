@@ -14,14 +14,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @mixin flex($flex_center: center) {
-       justify-content: $flex_center;
-       display: flex;
-       align-items: center;
-    }
+@import './../assets/scss/partials/_partial.scss';
 
     .bg-pattern-header {
-        background-image: url("./../assets/shared/desktop/bg-pattern-small-circle.svg"); /* The image used */
+        background-image: url("./../assets/shared/desktop/bg-pattern-small-circle.svg");
         background-color: #E7816B;
         background-repeat: no-repeat;
         background-size: cover;
@@ -31,13 +27,12 @@ export default {
         @include flex;
 
         h1, p {
-            color: #fff;
-            text-align: center;
+            @extend %align-white-text;
         }
 
         p {
             margin-top: 1rem;
-            line-height: 1.8;
+            @extend %paragraph-height;
         }
     }
 </style>

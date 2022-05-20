@@ -22,8 +22,7 @@ export default {
         margin-top: 2rem;
 
         img {
-            display: block;
-            width: 100%;
+            @extend %%image-block;
             border-top-left-radius: 15px;
             border-top-right-radius: 15px ;
         }
@@ -46,7 +45,7 @@ export default {
         }
 
         p {
-            line-height: 1.7;
+            @extend %paragraph-height;
             margin-top: 1rem;
         }
     }

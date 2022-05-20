@@ -61,12 +61,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-     @mixin flex($flex_center: center) {
-       justify-content: $flex_center;
-       display: flex;
-       align-items: center;
-    }
-
+@import './../assets/scss/partials/_partial.scss';
     .bg-pattern-wrap{
         padding: 7rem 1.5rem 0;
     }
@@ -89,12 +84,11 @@ export default {
         }
 
         h3, p {
-            text-align: center;
-            color: #fff;
+            @extend %align-white-text;
         }
 
         p {
-            line-height: 1.8;
+           @extend %paragraph-height;
             margin: 1.5rem 0;
         }
     }

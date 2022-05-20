@@ -16,12 +16,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @mixin flex($flex_position: center) {
-       justify-content: $flex_position;
-       display: flex;
-       align-items: center;
-    }
-
+@import './../assets/scss/partials/_partial.scss';
     .flex-nav{
         @include flex($flex_position: space-between);
         padding: 0 1.5rem;

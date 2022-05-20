@@ -19,3 +19,9 @@
     width: 100%;
     padding: 4rem 1.5rem;
 }
+
+@mixin flex($flex_position: center) {
+    justify-content: $flex_position;
+    display: flex;
+    align-items: center;
+}

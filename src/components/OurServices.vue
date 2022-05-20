@@ -1,7 +1,7 @@
 <template>
     <div class="overlay">
         <div>
-            <h2> {{ service }} </h2>
+            <h2>{{ service }}</h2>
             <p :aria-label="serviceInfo">VIEW PROJECTS 
                 <span>
                     <img src="./../assets/shared/desktop/icon-right-arrow.svg" alt=""/>
@@ -18,11 +18,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-     @mixin flex($flex_center: center) {
-       justify-content: $flex_center;
-       display: flex;
-       align-items: center;
-    }
+@import './../assets/scss/partials/_partial.scss';
 
     .overlay  {
         background: rgba(0, 0, 0, 0.6);

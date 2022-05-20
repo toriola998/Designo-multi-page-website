@@ -9,13 +9,8 @@ export default {
 
 </script>
 <style lang="scss" scoped>
-     @mixin flex($flex_center: center) {
-       justify-content: $flex_center;
-       display: flex;
-       align-items: center;
-    }
-
-      .call-to-action {
+@import './../assets/scss/partials/_partial.scss';
+    .call-to-action {
         @include flex;
         background-color: #fff;
         color: var(--black-color);
