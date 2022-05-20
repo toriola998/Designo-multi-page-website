@@ -34,6 +34,19 @@
                             />
             </div>
         </section>
+
+        <section aria-label="Other services we render at Designo">
+            <div class="our-services">
+                <div class="web-design design" 
+                    @click="this.$router.push({ path: '/web-design'})">
+                    <OurServices service="WEB DESIGN" serviceInfo="view some of Designo's web design projects" />
+                </div>
+                <div class="graphic-design design"
+                    @click="this.$router.push({ path: '/graphic-design'})">
+                    <OurServices service="GRAPHIC DESIGN" serviceInfo="view some of Designo's graphic design projects" />
+                </div>
+            </div>
+        </section>
     </main>
 </template>
 
@@ -48,7 +61,3 @@ export default {
     }
 }
 </script>
-
-<style>
-
-</style>

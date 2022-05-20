@@ -44,11 +44,13 @@
 
         <section aria-label="Other services we render at Designo">
             <div class="our-services">
-                <div class="app-design design">
-                    <OurServices service="APP DESIGN" serviceInfo="view application design projects" />
+                <div class="app-design design" 
+                    @click="this.$router.push({ path: '/app-design'})">
+                    <OurServices service="APP DESIGN" serviceInfo="view some of Designo's app design projects" />
                 </div>
-                <div class="graphic-design design">
-                    <OurServices service="GRAPHIC DESIGN" serviceInfo="view web design projects" />
+                <div class="graphic-design design"
+                    @click="this.$router.push({ path: '/graphic-design'})">
+                    <OurServices service="GRAPHIC DESIGN" serviceInfo="view some of Designo's web design projects" />
                 </div>
             </div>
         </section>

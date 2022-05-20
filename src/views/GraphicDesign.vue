@@ -5,7 +5,7 @@
                         tailored to meet your business objectives." />
     </header>
     <main>
-        <section aria-label="some of the web designs done by Designo">
+        <section aria-label="some of the Graphics designs done by Designo">
             <div class="projects-wrapper">
                 <ProjectDetails projectImage="graphic-design/desktop/image-change.jpg"
                                 projectName="TIM BROWN" 
@@ -27,11 +27,13 @@
 
         <section aria-label="Other services we render at Designo">
             <div class="our-services">
-                <div class="app-design design">
-                    <OurServices service="APP DESIGN" serviceInfo="view application design projects" />
+                <div class="app-design design"
+                    @click="this.$router.push({ path: '/app-design'})">
+                    <OurServices service="APP DESIGN" serviceInfo="view some of Designo's app design projects" />
                 </div>
-                <div class="web-design design">
-                    <OurServices service="WEB DESIGN" serviceInfo="view web design projects" />
+                <div class="web-design design"
+                    @click="this.$router.push({ path: '/web-design'})">
+                    <OurServices service="WEB DESIGN" serviceInfo="view some of Designo's web design projects" />
                 </div>
             </div>
         </section> 

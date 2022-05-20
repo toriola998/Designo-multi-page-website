@@ -14,16 +14,17 @@
     <main>
         <section aria-label="Services we render in Designo"> 
             <div class="services">
-                <!--<router-link to="/web-design">-->
-                <div class="web-design design" @click="this.$router.push({ path: '/web-design'})">
-                    <OurServices service="WEB DESIGN" serviceInfo="view web design projects" />
+                <div class="web-design design" 
+                     @click="this.$router.push({ path: '/web-design'})">
+                    <OurServices service="WEB DESIGN" serviceInfo="view some of Designo's web design projects" />
                 </div>
-                <!--</router-link>-->
-                <div class="app-design design">
-                    <OurServices service="APP DESIGN" serviceInfo="view application design projects" />
+                <div class="app-design design"
+                    @click="this.$router.push({ path: '/app-design'})">
+                    <OurServices service="APP DESIGN" serviceInfo="view some of Designo's application design projects" />
                 </div>
-                <div class="graphic-design design">
-                    <OurServices service="GRAPHIC DESIGN" serviceInfo="view web design projects" />
+                <div class="graphic-design design"
+                     @click="this.$router.push({ path: '/graphic-design'})">
+                    <OurServices service="GRAPHIC DESIGN" serviceInfo="view some of Designo's web design projects" />
                 </div>
             </div>
         </section>
