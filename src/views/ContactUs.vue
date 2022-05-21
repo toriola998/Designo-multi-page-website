@@ -9,7 +9,8 @@
 
             <form @submit.prevent="submitForm()">
                     <div class="input-wrap">
-                        <input type="text" placeholder="Name" v-model="name"/>
+                        <label for="name" hidden>Name</label>
+                        <input type="text" placeholder="Name" id="name" v-model="name"/>
                         <p class="error" v-if="nameError">
                             <span>Can't be empty</span>
                             <img src="./../assets/contact/desktop/icon-error.svg" alt=""/>
@@ -17,19 +18,34 @@
                     </div>
 
                     <div class="input-wrap">
-                        <input type="text" placeholder="Email" v-model="email"/>
-                        <p class="error" v-if="emailError">Can't be empty</p> 
-                        <p class="error" v-if="invalidEmailError">Invalid Email</p>
+                        <label for="email" hidden>Email</label>
+                        <input type="text" placeholder="Email" id="email" v-model="email"/>
+                        <p class="error" v-if="emailError">
+                            <span>Can't be empty</span>
+                            <img src="./../assets/contact/desktop/icon-error.svg" alt=""/>
+                        </p> 
+                        <p class="error" v-if="invalidEmailError">
+                            <span>Invalid Email</span>
+                            <img src="./../assets/contact/desktop/icon-error.svg" alt=""/>
+                        </p>
                     </div>
 
                     <div class="input-wrap">
-                        <input type="number" placeholder="Phone" v-model="phone"/>
-                        <p class="error" v-if="phoneError">Can't be empty</p>
+                        <label for="phone" hidden>Phone</label>
+                        <input type="number" placeholder="Phone" id="phone" v-model="phone"/>
+                        <p class="error" v-if="phoneError">
+                            <span>Can't be empty</span>
+                            <img src="./../assets/contact/desktop/icon-error.svg" alt=""/>
+                        </p>
                     </div>
                     
                     <div class="input-wrap" style="margin: 3rem 0 2rem">
-                        <textarea type="text" placeholder="Message" v-model="message"></textarea>
-                        <p class="error" v-if="messageError">Can't be empty</p>
+                        <label for="message" hidden> Message </label>
+                        <textarea type="text" placeholder="Message" id="message" v-model="message"></textarea>
+                        <p class="error" v-if="messageError">
+                            <span>Can't be empty</span>
+                            <img src="./../assets/contact/desktop/icon-error.svg" alt=""/>
+                        </p>
                     </div>
 
                     <WhiteButton callToAction="SUBMIT" buttonRole="submit your form"/>
