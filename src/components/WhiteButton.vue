@@ -16,4 +16,9 @@ export default {
         background-color: #fff;
         color: var(--black-color);      
     }
+
+    .call-to-action:hover {
+        background-color: var(--hover-peach);
+        color: #fff;
+    }
 </style>

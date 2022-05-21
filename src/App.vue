@@ -30,6 +30,7 @@ export default {
         --color-black: #333136;
         --light-peach: #FDF3F0;
         --dark-peach: #E7816B;
+        --hover-peach: #FFAD9B;
     }
 
     button {
