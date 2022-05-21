@@ -46,7 +46,6 @@ export default {
         }
 
         p {
-            @extend %paragraph-height;
             margin-top: 1rem;
         }
     }

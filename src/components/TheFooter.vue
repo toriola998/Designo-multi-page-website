@@ -86,7 +86,6 @@ export default {
         }
 
         p {
-           @extend %paragraph-height;
             margin: 1.5rem 0;
         }
     }

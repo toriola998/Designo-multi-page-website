@@ -31,7 +31,6 @@ export default {
 
         p {
             margin-top: 1rem;
-            @extend %paragraph-height;
         }
     }
 </style>

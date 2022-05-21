@@ -35,7 +35,6 @@ export default {
     }
 
     p {
-        @extend %paragraph-height;
         padding-top: 2rem;
         color: var(--color-black);
     }

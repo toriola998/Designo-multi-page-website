@@ -44,6 +44,7 @@ export default {
 
     p {
         font-weight: 400;
+        line-height: 1.8;
     }
 
     ul {

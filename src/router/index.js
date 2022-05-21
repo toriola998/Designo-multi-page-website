@@ -6,6 +6,7 @@ import GraphicDesign from './../views/GraphicDesign.vue'
 import AppDesign from './../views/AppDesign.vue'
 import OurLocations from './../views/OurLocations.vue'
 import AboutUs from './../views/AboutUs.vue'
+import ContactUs from './../views/ContactUs.vue'
 
 const router = createRouter({
     history:  createWebHistory(),
@@ -51,6 +52,12 @@ const router = createRouter({
             path: '/about-us',
             name: 'About Us',
             component: AboutUs
+        },
+
+        {
+            path: '/contact-us',
+            name: 'Contact Us',
+            component: ContactUs
         }
     ]
 })
