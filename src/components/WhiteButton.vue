@@ -12,13 +12,8 @@ export default {
 @import './../assets/scss/partials/_partial.scss';
     .call-to-action {
         @include flex;
+        @extend %cta-btn;
         background-color: #fff;
-        color: var(--black-color);
-        font-weight: 500;
-        font-size: .85rem;
-        margin: 0 auto;
-        border-radius: 5px;
-        width: 8rem;
-        height: 3rem;       
+        color: var(--black-color);      
     }
 </style>

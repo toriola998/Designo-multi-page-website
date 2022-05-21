@@ -12,30 +12,32 @@
 
 <script>
 export default {
-    props: ['locationImage', 'locationName', 'locationLinkLabel']
+    props: ['locationImage', 'locationName', 'locationLinkLabel', 'locationAltText']
 }
 </script>
 
 <style lang="scss" scoped>
 @import './../assets/scss/partials/_partial.scss';
     .each-location {
-         img {
-        display: block;
-        margin: auto;
-    }
+        padding-bottom: 3rem;
+        
+        img {
+            display: block;
+            margin: auto;
+        }
 
-    h2 {
-        text-align: center;
-        letter-spacing: 5px;
-        font-size: 1.3rem;
-        margin: 1.5rem 0;
-    }
+        h2 {
+            text-align: center;
+            letter-spacing: 5px;
+            font-size: 1.3rem;
+            margin: 1.5rem 0;
+        }
 
-    a {
-        @extend %cta-btn;
-        @include flex;
-        background-color: var(--dark-peach);
-        color: white;
-    }
+        a {
+            @extend %cta-btn;
+            @include flex;
+            background-color: var(--dark-peach);
+            color: white;
+        }
     }
 </style>
