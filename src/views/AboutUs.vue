@@ -23,14 +23,16 @@
                        impressed with our high-quality outcomes that encapsulates their brand's 
                        story and mission."
                     />
+            <location-links></location-links>
         </main>
     </div>
 </template>
 
 <script>
 import AboutInfo from '../components/AboutInfo.vue'
+import LocationLinks from '../components/LocationLinks.vue'
 export default {
-  components: { AboutInfo },
+  components: { AboutInfo, LocationLinks },
 
 }
 </script>

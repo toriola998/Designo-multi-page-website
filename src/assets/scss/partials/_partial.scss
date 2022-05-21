@@ -12,6 +12,16 @@
     line-height: 1.8;
 }
 
+%cta-btn {
+    font-weight: 500;
+    font-size: .85rem;
+    margin: 0 auto;
+    border-radius: 5px;
+    width: 8rem;
+    height: 3rem; 
+    text-decoration: none;      
+}
+
 @mixin flex($flex_position: center) {
     justify-content: $flex_position;
     display: flex;
