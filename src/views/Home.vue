@@ -85,7 +85,6 @@ export default {
 
             p { 
                 padding: 1rem 0;
-                @extend %paragraph-height;
              }
  
             img {

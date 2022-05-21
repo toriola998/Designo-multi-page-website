@@ -28,6 +28,7 @@ export default {
 
         h1, p {
             @extend %align-white-text;
+            margin-top: 1.5rem;
         }
     }
    
