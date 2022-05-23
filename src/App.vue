@@ -108,16 +108,16 @@ export default {
 
     .web-design {
         height: 600px;
-        background-image: url("./assets/home/mobile/image-web-design.jpg");
+        background-image: url("./assets/home/desktop/image-web-design-large.jpg");
     }
 
     
     .app-design {
-        background-image: url("./assets/home/mobile/image-app-design.jpg");
+        background-image: url("./assets/home/desktop/image-app-design.jpg");
     }
 
     .graphic-design {
-        background-image: url("./assets/home/mobile/image-graphic-design.jpg");
+        background-image: url("./assets/home/desktop/image-graphic-design.jpg");
     }
 
     .app-design,

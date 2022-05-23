@@ -21,6 +21,7 @@
         </div>
     </header>
     <main>
+        <img src="./../assets/home/desktop/grey-bg-top.svg" alt="" class="grey-bg-top" />
         <section aria-label="Services we render in Designo"> 
             <div class="services">
                 <div class="web-design design" 
@@ -189,15 +190,23 @@ export default {
        column-gap: 2rem;
    }
 
+    .grey-bg-top {
+        left: 0;
+        top: 30rem;
+    }
+
    .grey-bg {
-       position: absolute;
-        z-index: -9999;
         right: 0;
-        width: 45rem;
         bottom: -77rem;
     }
-   
 
+    .grey-bg-top,
+    .grey-bg {
+        position: absolute;
+        z-index: -9999;
+        width: 45rem;
+    }
+   
    .why-choose-wrapper {
         display: grid;
         grid-template-columns: auto auto auto;
