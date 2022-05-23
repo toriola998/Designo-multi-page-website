@@ -1,14 +1,16 @@
 <template>
     <div class="why-choose-us">
-        <img :src="illustration" />
-        <h3>{{ title }}</h3>
-        <p> {{ notes }}</p>
+        <img :src="require(`./../assets/home/desktop/${illustration}`)" />
+        <div>
+            <h3>{{ serviceTitle }}</h3>
+            <p> {{ serviceInfo }}</p>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['illustration', 'title', 'notes' ]
+    props: ['illustration', 'serviceTitle', 'serviceInfo' ]
 }
 </script>
 
@@ -29,4 +31,15 @@ export default {
             color: var(--color-black);
         }
     }
+@media screen and (min-width: 615px) {
+    .why-choose-us {
+        display: grid;
+        grid-template-columns: 30% 60%;
+        gap: 4rem;
+
+        h3, p {
+            text-align: initial;
+        }
+    }
+}
 </style>

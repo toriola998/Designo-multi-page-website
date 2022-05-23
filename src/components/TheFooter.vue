@@ -2,7 +2,7 @@
     <footer>
         <div class="bg-pattern-wrap">
             <div class="bg-pattern-footer">
-                <h3>Let's talk about your project</h3>
+                <h3>Let's talk about<br> your project</h3>
                 <p>Ready to take it to the next level? Contact us today and find 
                 out how our expertise can help your business grow.</p>
                 <WhiteButton buttonRole="Get in touch with us at Designo" callToAction="GET IN TOUCH" />
@@ -30,22 +30,26 @@
                     </li>
                 </ul>
             </nav> 
-            <address>
-               Designo Central Office<br>
-                <span>3886 Wellington Street,Toronto, Ontario M9C 3J5</span>
-             </address>
+            <div class="flex-footer"> 
+                <div>
+                    <address>
+                        Designo Central Office<br>
+                        <span>3886 Wellington Street,Toronto, Ontario M9C 3J5</span>
+                    </address>
 
-            <p class="contact">Contact Us (Central Office) <br>
-                <a href=""> P : +1 253-863-8967</a>
-                <a href=""> M : contact@designo.co </a>
-            </p>
-            
-            <div class="social-icons">
-                <img src="./../assets/shared/desktop/icon-facebook.svg" alt="Follow us on facebook" />
-                <img src="./../assets/shared/desktop/icon-youtube.svg" alt="Subscribe to our youTube channel" />
-                <img src="./../assets/shared/desktop/icon-twitter.svg" alt="Follow us on twitter" />
-                <img src="./../assets/shared/desktop/icon-pinterest.svg" alt="Check us on Pinterest" />
-                <img src="./../assets/shared/desktop/icon-instagram.svg" alt="Follow us on Instagram" />
+                    <p class="contact">Contact Us (Central Office) <br>
+                        <a href=""> P : +1 253-863-8967</a>
+                        <a href=""> M : contact@designo.co </a>
+                    </p>
+                </div>
+                
+                <div class="social-icons">
+                    <img src="./../assets/shared/desktop/icon-facebook.svg" alt="Follow us on facebook" />
+                    <img src="./../assets/shared/desktop/icon-youtube.svg" alt="Subscribe to our youTube channel" />
+                    <img src="./../assets/shared/desktop/icon-twitter.svg" alt="Follow us on twitter" />
+                    <img src="./../assets/shared/desktop/icon-pinterest.svg" alt="Check us on Pinterest" />
+                    <img src="./../assets/shared/desktop/icon-instagram.svg" alt="Follow us on Instagram" />
+                </div>
             </div>
         </div>
     </footer>
@@ -97,12 +101,8 @@ export default {
 
         nav::before {
             content: '';
-            background-color: white;
-            opacity: 0.2;
+            @include footer-border;
             margin: 1.7rem 0 1rem;
-            height: 1px;
-            width: 100%;
-            display: block;
         }
 
         nav li a {
@@ -148,4 +148,64 @@ export default {
             margin-right: 1rem;
         }
     }
+@media screen and (min-width: 520px) {
+     .bg-pattern-wrap{
+        padding: 7rem 2.5rem 0;
+    }
+
+    .bg-pattern-footer {
+        padding: 3rem 2.5rem;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .footer-logo {
+        display: initial;
+    }
+
+    address,
+    .contact {
+        text-align: initial;
+        margin: 0 0 0 0;
+    }
+
+    .bg-black {
+        padding: 16rem 2.5rem 4rem;
+        position: relative;
+
+        nav ul {
+            display: flex;
+            position: absolute;
+            right: 2.5rem;
+            bottom: 13.5rem;
+        }
+
+        nav li a {
+            padding: 0 1rem 0 0;
+        }
+
+        nav::before {
+            display: none;
+        }
+
+        nav::after {
+            content: '';
+            @include footer-border;
+            margin: 2rem 0;
+        }
+    }
+
+    .flex-footer {
+        @include flex($flex_position: space-between);
+
+        >div:nth-child(1) {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+
+    .social-icons {
+        margin-top: unset;
+    }
+}
 </style>

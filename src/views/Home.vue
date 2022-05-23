@@ -31,21 +31,21 @@
 
         <section aria-label="Why you should choose designo">
             <div class="why-choose-wrapper">
-                <WhyChooseUs illustration="./../assets/home/desktop/illustration-passionate.svg"
-                            title="PASSIONATE"
-                            notes="Each project starts with an in-depth brand research to ensure
+                <WhyChooseUs illustration="illustration-passionate.svg"
+                            serviceTitle="PASSIONATE"
+                            serviceInfo="Each project starts with an in-depth brand research to ensure
                             we only create products that serve a purpose. We merge art, design, and
                             technology into exciting new solutions." 
                 />
-                <WhyChooseUs illustration="./../assets/home/desktop/illustration-resourceful.svg"
-                            title="RESOURCEFUL"
-                            notes="Everything that we do has a strategic purpose. We use an agile 
+                <WhyChooseUs illustration="illustration-resourceful.svg"
+                            serviceTitle="RESOURCEFUL"
+                            serviceInfo="Everything that we do has a strategic purpose. We use an agile 
                             approach in all of our projects and value customer collaboration. It guarantees 
                             superior results that fulfill our clients' needs." 
                 />
-                <WhyChooseUs illustration="./../assets/home/desktop/illustration-friendly.png"
-                            title="FRIENDLY"
-                            notes=" We are a group of enthusiastic folks who know how to put people
+                <WhyChooseUs illustration="illustration-friendly.png"
+                            serviceTitle="FRIENDLY"
+                            serviceInfo=" We are a group of enthusiastic folks who know how to put people
                             first. Our success depends on our customers, and we strive to give them 
                             the best experience a company can provide." 
                 />
@@ -101,4 +101,47 @@ export default {
     .why-choose-wrapper {
         padding: 0 1.5rem;
     }
+
+@media screen and (min-width: 520px) {
+    header,
+    .why-choose-wrapper {
+        padding: 0 2.5rem;
+    }
+
+    .home-container {
+        border-radius: 7px;
+        padding: 4rem 3rem 0;
+
+        img {
+            width: 50%;
+            margin: 5rem auto -0.4rem;
+            display: block;
+        }
+    }
+
+    .services {
+         padding: 6rem 3rem;
+    }
+
+}
+
+@media screen and (min-width: 615px) {
+    .home-container {
+        padding: 4rem 4rem 0;
+
+        h1 {
+            font-size: 2.2rem;
+            line-height: 1.2;
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .home-container {
+        div {
+            width: 500px;
+            margin: auto;
+        }
+    }
+}
 </style>

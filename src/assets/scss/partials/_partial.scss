@@ -18,6 +18,14 @@
     text-decoration: none;      
 }
 
+@mixin footer-border {
+    background-color: white;
+    opacity: 0.2;
+    height: 1px;
+    width: 100%;
+    display: block;
+}
+
 @mixin flex($flex_position: center) {
     justify-content: $flex_position;
     display: flex;

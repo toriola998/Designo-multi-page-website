@@ -82,4 +82,22 @@ export default {
     .our-services {
         padding: 6rem 1.5rem 0;
     }
+
+@media screen and (min-width: 520px) {
+    .design {
+        height: 200px;
+    }
+
+    .web-design {
+        background-image: url("./assets/home/tablet/image-web-design.jpg");
+    }
+
+    .app-design {
+        background-image: url("./assets/home/tablet/image-app-design.jpg");
+    }
+
+    .graphic-design {
+        background-image: url("./assets/home/tablet/image-graphic-design.jpg");
+    }
+}
 </style>
