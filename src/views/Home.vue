@@ -54,13 +54,14 @@
                             approach in all of our projects and value customer collaboration. It guarantees 
                             superior results that fulfill our clients' needs." 
                 />
-                <WhyChooseUs illustration="illustration-friendly.png"
+                <WhyChooseUs illustration="illustration-friendly.svg"
                             serviceTitle="FRIENDLY"
                             serviceInfo=" We are a group of enthusiastic folks who know how to put people
                             first. Our success depends on our customers, and we strive to give them 
                             the best experience a company can provide." 
                 />
             </div>
+            <img src="./../assets/home/desktop/grey-bg.svg" alt="" class="grey-bg" />
         </section>
     </main>
 </template>
@@ -161,6 +162,8 @@ export default {
         display: grid;
         grid-template-columns: 50% 50%;
         column-gap: 5rem;
+        background-position: right;
+        background-size: contain;
 
         div {
             width: initial
@@ -185,5 +188,20 @@ export default {
        grid-template-columns: auto auto;
        column-gap: 2rem;
    }
+
+   .grey-bg {
+       position: absolute;
+        z-index: -9999;
+        right: 0;
+        width: 45rem;
+        bottom: -77rem;
+    }
+   
+
+   .why-choose-wrapper {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-gap: 2rem;
+    }
 }
 </style>

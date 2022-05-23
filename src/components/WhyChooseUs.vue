@@ -42,4 +42,14 @@ export default {
         }
     }
 }
+
+@media screen and (min-width: 1000px) {
+    .why-choose-us {
+        display: initial;
+
+            h3, p {
+                text-align: center;
+            }
+    }
+}
 </style>

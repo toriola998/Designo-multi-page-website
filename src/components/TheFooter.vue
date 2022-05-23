@@ -2,9 +2,11 @@
     <footer>
         <div class="bg-pattern-wrap">
             <div class="bg-pattern-footer">
-                <h3>Let's talk about<br> your project</h3>
-                <p>Ready to take it to the next level? Contact us today and find 
-                out how our expertise can help your business grow.</p>
+                <div>
+                    <h3>Let's talk about<br> your project</h3>
+                    <p>Ready to take it to the next level? Contact us today and find 
+                    out how our expertise can help your business grow.</p>
+                </div>
                 <WhiteButton buttonRole="Get in touch with us at Designo" callToAction="GET IN TOUCH" />
             </div>
         </div>
@@ -154,7 +156,7 @@ export default {
     }
 
     .bg-pattern-footer {
-        padding: 3rem 2.5rem;
+        padding: 3rem 4rem;
     }
 }
 
@@ -209,9 +211,20 @@ export default {
     }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1000px) {
     address {
         margin: 0 6rem 0 0;
+    }
+
+    .bg-pattern-footer {
+        display: grid;
+        grid-template-columns: 50% auto;
+        justify-content: space-between;
+        align-items: center;
+
+        h3, p {
+            text-align: initial;
+        }
     }
 }
 </style>
