@@ -100,4 +100,29 @@ export default {
         background-image: url("./assets/home/tablet/image-graphic-design.jpg");
     }
 }
+
+@media screen and (min-width: 1000px) {
+    .design{
+        width: initial;
+    }
+
+    .web-design {
+        height: 600px;
+        background-image: url("./assets/home/mobile/image-web-design.jpg");
+    }
+
+    
+    .app-design {
+        background-image: url("./assets/home/mobile/image-app-design.jpg");
+    }
+
+    .graphic-design {
+        background-image: url("./assets/home/mobile/image-graphic-design.jpg");
+    }
+
+    .app-design,
+    .graphic-design {
+        height: 290px;
+    }
+}
 </style>

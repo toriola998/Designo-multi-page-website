@@ -8,7 +8,16 @@
                 Find out more about our services.</p>
                 <WhiteButton buttonRole="Learn more about Designo" callToAction="LEARN MORE" />
             </div>
-            <img src="./../assets/home/mobile/image-hero-mobile.png"  class="hero-image" alt=""/>  
+            <picture>
+                <!--<source media="(min-width: 700px)" 
+                        srcset="require(`@/assets/portfolio/desktop/${filename}.jpg`)">-->
+                <source media="(min-width: 1000px)" 
+                        srcset="./../assets/home/desktop/image-hero-phone.png">
+                <img src="./../assets/home/mobile/image-hero-mobile.png"
+                        alt=""
+                        class="hero-image"
+                        >
+            </picture> 
         </div>
     </header>
     <main>
@@ -18,13 +27,15 @@
                      @click="this.$router.push({ path: '/web-design'})">
                     <OurServices service="WEB DESIGN" serviceInfo="view some of Designo's web design projects" />
                 </div>
-                <div class="app-design design"
-                    @click="this.$router.push({ path: '/app-design'})">
-                    <OurServices service="APP DESIGN" serviceInfo="view some of Designo's application design projects" />
-                </div>
-                <div class="graphic-design design"
-                     @click="this.$router.push({ path: '/graphic-design'})">
-                    <OurServices service="GRAPHIC DESIGN" serviceInfo="view some of Designo's web design projects" />
+                <div>
+                    <div class="app-design design"
+                        @click="this.$router.push({ path: '/app-design'})">
+                        <OurServices service="APP DESIGN" serviceInfo="view some of Designo's application design projects" />
+                    </div>
+                    <div class="graphic-design design"
+                        @click="this.$router.push({ path: '/graphic-design'})">
+                        <OurServices service="GRAPHIC DESIGN" serviceInfo="view some of Designo's web design projects" />
+                    </div>
                 </div>
             </div>
         </section>
@@ -143,5 +154,36 @@ export default {
             margin: auto;
         }
     }
+}
+
+@media screen and (min-width: 1000px) {
+    .home-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        column-gap: 5rem;
+
+        div {
+            width: initial
+        }
+
+        h1, p {
+            @include initial-font;
+        }
+
+        img {
+            width: 70%;
+            margin: 0;
+        }
+    }
+
+   .call-to-action {
+       margin: initial;
+   }
+
+   .services {
+       display: grid;
+       grid-template-columns: auto auto;
+       column-gap: 2rem;
+   }
 }
 </style>

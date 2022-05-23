@@ -166,7 +166,7 @@ export default {
     address,
     .contact {
         text-align: initial;
-        margin: 0 0 0 0;
+        margin: 0 1rem 0 0;
     }
 
     .bg-black {
@@ -206,6 +206,12 @@ export default {
 
     .social-icons {
         margin-top: unset;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    address {
+        margin: 0 6rem 0 0;
     }
 }
 </style>

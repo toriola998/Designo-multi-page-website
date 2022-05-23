@@ -18,6 +18,10 @@
     text-decoration: none;      
 }
 
+@mixin initial-font {
+    text-align: initial;
+}
+
 @mixin footer-border {
     background-color: white;
     opacity: 0.2;
