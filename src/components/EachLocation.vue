@@ -1,18 +1,29 @@
 <template>
-    <img :src="require(`./../assets/locations/desktop/${mapImage}`)" 
-         :alt="mapAltText" 
-         class="map"
-    />
-    <div class="light-bg-pattern">
-        <h2 class="location">{{ country }}</h2>
-            <address>{{ office }}<br>
-                <span>{{ address }}</span>
-            </address>
+    <div class="each-location-wrap">
+        <picture>
+            <source media="(min-width: 1000px)" 
+                :srcset="require(`./../assets/locations/desktop/${mapImage}`)">    
+            <source media="(min-width: 615px)" 
+                    :srcset="require(`./../assets/locations/tablet/${mapImage}`)">
+            <img :src="require(`./../assets/locations/desktop/${mapImage}`)"  
+                    :alt="mapAltText" 
+                    class="map" >
+        </picture>
+        <div class="light-bg-pattern">
+            <div>
+                <h2 class="location">{{ country }}</h2>
+                <div>
+                    <address>{{ office }}<br>
+                        <span>{{ address }}</span>
+                    </address>
 
-        <p class="contact">Contact <br>
-            <a href="">{{ number }}</a>
-            <a href=""> {{ email}} </a>
-        </p>
+                    <p class="contact">Contact <br>
+                        <a href="">{{ number }}</a>
+                        <a href=""> {{ email}} </a>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -32,7 +43,7 @@ export default {
     }
 
     .map {
-        display: block;
+        @extend %image-block;
     }
 
     .location {
@@ -62,4 +73,68 @@ export default {
         text-decoration: none;  
         color: var(--color-black);  
     }
+
+@media screen and (min-width: 615px) {
+    .light-bg-pattern,
+    .map {
+        border-radius: 10px;
+    }
+
+    .map {
+        margin-bottom: 1rem;
+    }
+
+    .light-bg-pattern {
+        margin-bottom: 4rem;
+        padding: 4rem 3rem;
+
+        > div > div {
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+            column-gap: 3rem;
+        }
+    }
+
+    .location {
+        font-size: 2.2rem;
+    }
+
+    address,
+    .contact,
+    .location {
+        text-align: initial;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .each-location-wrap {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /**REVERSE THE 1st & 3rd LOCATIONS */
+    .each-location-wrap:nth-child(1) > .light-bg-pattern,
+    .each-location-wrap:nth-child(3) > .light-bg-pattern {
+       grid-area: 1;
+    }
+
+    .map,
+    .light-bg-pattern {
+        margin-bottom: initial;
+    }
+
+    .light-bg-pattern {
+        @include flex;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .each-location-wrap {
+        max-width: 1330px;
+        margin: 0 auto 2rem;
+    }
+}
 </style>

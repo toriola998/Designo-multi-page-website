@@ -221,7 +221,7 @@ export default {
         align-items: center;
         column-gap: 2rem;
         -moz-column-gap: 2rem;
-        padding: 4rem 1.5rem;
+        padding: 0rem 1.5rem 3rem;
     }
 }
 
@@ -231,7 +231,7 @@ export default {
     }
 
     .contact {
-        padding: 4rem ;
+       padding: 0rem 4rem 3rem;;
         grid-template-columns: 45% 45%;
         column-gap: 4rem;
         -moz-column-gap: 4rem;
@@ -243,7 +243,7 @@ export default {
 }
 
 @media screen and (min-width: 1400px) {
-    .contact {
+    .contact  {
         max-width: 1330px;
         margin: auto;
     }

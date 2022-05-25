@@ -248,8 +248,10 @@ export default {
     }
 
     .bg-black {
-        max-width: 1300px;
-        margin: auto;
+        >div {
+            max-width: 1300px;
+            margin: auto;
+        }
     }
 }
 </style>
