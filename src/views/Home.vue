@@ -24,18 +24,20 @@
         <img src="./../assets/home/desktop/grey-bg-top.svg" alt="" class="grey-bg-top" />
         <section aria-label="Services we render in Designo"> 
             <div class="services">
-                <div class="web-design design" 
-                     @click="this.$router.push({ path: '/web-design'})">
-                    <OurServices service="WEB DESIGN" serviceInfo="view some of Designo's web design projects" />
-                </div>
-                <div>
-                    <div class="app-design design"
-                        @click="this.$router.push({ path: '/app-design'})">
-                        <OurServices service="APP DESIGN" serviceInfo="view some of Designo's application design projects" />
+                <div class="services-inner">
+                    <div class="web-design design" 
+                        @click="this.$router.push({ path: '/web-design'})">
+                        <OurServices service="WEB DESIGN" serviceInfo="view some of Designo's web design projects" />
                     </div>
-                    <div class="graphic-design design"
-                        @click="this.$router.push({ path: '/graphic-design'})">
-                        <OurServices service="GRAPHIC DESIGN" serviceInfo="view some of Designo's web design projects" />
+                    <div>
+                        <div class="app-design design"
+                            @click="this.$router.push({ path: '/app-design'})">
+                            <OurServices service="APP DESIGN" serviceInfo="view some of Designo's application design projects" />
+                        </div>
+                        <div class="graphic-design design"
+                            @click="this.$router.push({ path: '/graphic-design'})">
+                            <OurServices service="GRAPHIC DESIGN" serviceInfo="view some of Designo's web design projects" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -43,24 +45,26 @@
 
         <section aria-label="Why you should choose designo">
             <div class="why-choose-wrapper">
-                <WhyChooseUs illustration="illustration-passionate.svg"
-                            serviceTitle="PASSIONATE"
-                            serviceInfo="Each project starts with an in-depth brand research to ensure
-                            we only create products that serve a purpose. We merge art, design, and
-                            technology into exciting new solutions." 
-                />
-                <WhyChooseUs illustration="illustration-resourceful.svg"
-                            serviceTitle="RESOURCEFUL"
-                            serviceInfo="Everything that we do has a strategic purpose. We use an agile 
-                            approach in all of our projects and value customer collaboration. It guarantees 
-                            superior results that fulfill our clients' needs." 
-                />
-                <WhyChooseUs illustration="illustration-friendly.svg"
-                            serviceTitle="FRIENDLY"
-                            serviceInfo=" We are a group of enthusiastic folks who know how to put people
-                            first. Our success depends on our customers, and we strive to give them 
-                            the best experience a company can provide." 
-                />
+                <div class="why-choose-inner">
+                    <WhyChooseUs illustration="illustration-passionate.svg"
+                                serviceTitle="PASSIONATE"
+                                serviceInfo="Each project starts with an in-depth brand research to ensure
+                                we only create products that serve a purpose. We merge art, design, and
+                                technology into exciting new solutions." 
+                    />
+                    <WhyChooseUs illustration="illustration-resourceful.svg"
+                                serviceTitle="RESOURCEFUL"
+                                serviceInfo="Everything that we do has a strategic purpose. We use an agile 
+                                approach in all of our projects and value customer collaboration. It guarantees 
+                                superior results that fulfill our clients' needs." 
+                    />
+                    <WhyChooseUs illustration="illustration-friendly.svg"
+                                serviceTitle="FRIENDLY"
+                                serviceInfo=" We are a group of enthusiastic folks who know how to put people
+                                first. Our success depends on our customers, and we strive to give them 
+                                the best experience a company can provide." 
+                    />
+                </div>
             </div>
             <img src="./../assets/home/desktop/grey-bg.svg" alt="" class="grey-bg" />
         </section>
@@ -115,6 +119,11 @@ export default {
         padding: 0 1.5rem;
     }
 
+    .grey-bg-top,
+    .grey-bg {
+        display: none;
+    }
+
 @media screen and (min-width: 520px) {
     header,
     .why-choose-wrapper {
@@ -135,7 +144,6 @@ export default {
     .services {
          padding: 6rem 3rem;
     }
-
 }
 
 @media screen and (min-width: 615px) {
@@ -184,7 +192,7 @@ export default {
        margin: initial;
    }
 
-   .services {
+   .services-inner {
        display: grid;
        grid-template-columns: auto auto;
        column-gap: 2rem;
@@ -205,12 +213,44 @@ export default {
         position: absolute;
         z-index: -9999;
         width: 45rem;
+        display: block;
     }
    
-   .why-choose-wrapper {
+   .why-choose-inner {
         display: grid;
         grid-template-columns: auto auto auto;
         column-gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    header,
+    .why-choose-wrapper {
+        padding: 0 8rem;
+    }
+
+    .home-container {
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+
+    .services{
+        padding: 6rem 8rem;
+    }
+
+    .grey-bg-top,
+    .grey-bg {
+        width: 55rem;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .home-container,
+    .why-choose-inner,
+    .services-inner {
+        max-width: 1330px;
+        margin: auto;
     }
 }
 </style>

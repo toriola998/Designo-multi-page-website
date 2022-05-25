@@ -11,46 +11,48 @@
             </div>
         </div>
 
-        <div class="bg-black">
-            <a>
-                <img src="./../assets/shared/desktop/logo-light.png" 
-                    alt="Designo - Home"
-                    width="200" 
-                    class="footer-logo"/>
-            </a>
+        <div class="bg-black-wrap">
+            <div class="bg-black">
+                <a>
+                    <img src="./../assets/shared/desktop/logo-light.png" 
+                        alt="Designo - Home"
+                        width="200" 
+                        class="footer-logo"/>
+                </a>
 
-            <nav>
-                <ul>
-                    <li>
-                        <a> OUR COMPANY </a>
-                    </li>
-                    <li>
-                        <a> LOCATIONS </a>
-                    </li>
-                    <li>
-                        <a> CONTACT </a>
-                    </li>
-                </ul>
-            </nav> 
-            <div class="flex-footer"> 
-                <div>
-                    <address>
-                        Designo Central Office<br>
-                        <span>3886 Wellington Street,Toronto, Ontario M9C 3J5</span>
-                    </address>
+                <nav>
+                    <ul>
+                        <li>
+                            <a> OUR COMPANY </a>
+                        </li>
+                        <li>
+                            <a> LOCATIONS </a>
+                        </li>
+                        <li>
+                            <a> CONTACT </a>
+                        </li>
+                    </ul>
+                </nav> 
+                <div class="flex-footer"> 
+                    <div>
+                        <address>
+                            Designo Central Office<br>
+                            <span>3886 Wellington Street,Toronto, Ontario M9C 3J5</span>
+                        </address>
 
-                    <p class="contact">Contact Us (Central Office) <br>
-                        <a href=""> P : +1 253-863-8967</a>
-                        <a href=""> M : contact@designo.co </a>
-                    </p>
-                </div>
-                
-                <div class="social-icons">
-                    <img src="./../assets/shared/desktop/icon-facebook.svg" alt="Follow us on facebook" />
-                    <img src="./../assets/shared/desktop/icon-youtube.svg" alt="Subscribe to our youTube channel" />
-                    <img src="./../assets/shared/desktop/icon-twitter.svg" alt="Follow us on twitter" />
-                    <img src="./../assets/shared/desktop/icon-pinterest.svg" alt="Check us on Pinterest" />
-                    <img src="./../assets/shared/desktop/icon-instagram.svg" alt="Follow us on Instagram" />
+                        <p class="contact">Contact Us (Central Office) <br>
+                            <a href=""> P : +1 253-863-8967</a>
+                            <a href=""> M : contact@designo.co </a>
+                        </p>
+                    </div>
+                    
+                    <div class="social-icons">
+                        <img src="./../assets/shared/desktop/icon-facebook.svg" alt="Follow us on facebook" />
+                        <img src="./../assets/shared/desktop/icon-youtube.svg" alt="Subscribe to our youTube channel" />
+                        <img src="./../assets/shared/desktop/icon-twitter.svg" alt="Follow us on twitter" />
+                        <img src="./../assets/shared/desktop/icon-pinterest.svg" alt="Check us on Pinterest" />
+                        <img src="./../assets/shared/desktop/icon-instagram.svg" alt="Follow us on Instagram" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -96,8 +98,11 @@ export default {
         }
     }
 
-    .bg-black {
+    .bg-black-wrap {
         background-color: #1D1C1E;
+    }
+
+    .bg-black {
         color: #fff;
         padding: 16rem 1.5rem 4rem;
 
@@ -225,6 +230,30 @@ export default {
         h3, p {
             text-align: initial;
         }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .bg-pattern-wrap {
+        padding: 7rem 8rem 0;
+    }
+
+    .bg-black {
+        padding: 16rem 8rem 4rem;
+
+        nav ul {
+            right: 8rem;
+        }
+    }
+}
+@media screen and (min-width: 1400px) {
+    .bg-pattern-footer {
+        max-width: 1300px;
+        margin: 0 auto -12rem;
+    }
+
+    .bg-black {
+        max-width: 1300px;
+        margin: auto;
     }
 }
 </style>

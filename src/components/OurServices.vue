@@ -39,6 +39,7 @@ export default {
                 letter-spacing: 2px;
                 font-size: 2rem;
                 margin-bottom: .6rem;
+                text-align: center;
             }
 
             p {
