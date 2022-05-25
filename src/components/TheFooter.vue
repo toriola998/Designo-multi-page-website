@@ -237,7 +237,7 @@ export default {
         padding: 7rem 8rem 0;
     }
 
-    .bg-black-wrap {
+    .bg-black{
         padding: 16rem 8rem 4rem;
     }
 }
