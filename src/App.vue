@@ -99,6 +99,20 @@ export default {
     .graphic-design {
         background-image: url("./assets/home/tablet/image-graphic-design.jpg");
     }
+
+    .projects-wrapper {
+        padding: 4rem 6rem 0;
+    }
+}
+
+@media screen and (min-width: 615px) {
+    .projects-wrapper {
+        padding: 4rem 2.5rem 0;
+    }
+
+    .our-services {
+        padding: 6rem 2.5rem 0;
+    }
 }
 
 @media screen and (min-width: 1000px) {
@@ -107,11 +121,9 @@ export default {
     }
 
     .web-design {
-        height: 600px;
         background-image: url("./assets/home/desktop/image-web-design-large.jpg");
     }
 
-    
     .app-design {
         background-image: url("./assets/home/desktop/image-app-design.jpg");
     }
@@ -120,9 +132,13 @@ export default {
         background-image: url("./assets/home/desktop/image-graphic-design.jpg");
     }
 
-    .app-design,
-    .graphic-design {
-        height: 290px;
+    .projects-wrapper {
+        display: grid;
+        grid-template-columns: 32% 32% 32%;
+        column-gap: 1rem;
+        -moz-column-gap: 1rem;
+        row-gap: 2rem;
+        justify-content: center;
     }
 }
 </style>

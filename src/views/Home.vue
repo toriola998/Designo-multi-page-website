@@ -239,6 +239,15 @@ export default {
         padding: 6rem 8rem;
     }
 
+    .web-design {
+        height: 600px;
+    }
+
+    .app-design,
+    .graphic-design {
+        height: 290px;
+    }
+
     .grey-bg-top,
     .grey-bg {
         width: 55rem;

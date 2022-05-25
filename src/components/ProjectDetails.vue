@@ -4,8 +4,10 @@
             <img :src="require(`./../assets/${projectImage}`)" 
                  :alt="projectAltText"/>
             <div class="bg-peach">
-                <h2> {{projectName}} </h2>
-                <p>{{projectInfo}} </p>
+                <div>
+                    <h2> {{projectName}} </h2>
+                    <p>{{projectInfo}} </p>
+                </div>
             </div>
         </div>
     </div>
@@ -58,4 +60,46 @@ export default {
             color: #fff;
         }
     }
-</style>>
+
+@media screen and (min-width: 615px) {
+    .each-project {
+        display: grid;
+        grid-template-columns: 50% auto;
+
+        img {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 0 ;
+            border-bottom-left-radius: 15px ;
+        }
+    }
+
+    .bg-peach {
+        @include flex;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 15px;
+
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .each-project {
+        display: initial;
+
+        img {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px ;
+            border-bottom-left-radius: 0 ;
+            border-bottom-right-radius: 0 ;
+        }
+    }
+
+    .bg-peach {
+        @include flex;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+}
+</style>
