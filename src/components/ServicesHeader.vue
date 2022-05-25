@@ -51,6 +51,11 @@ export default {
             width: 400px;
         }
     }
+}
 
+@media screen and (min-width: 1200px) {
+    .bg-pattern-container {
+        padding: 0 8rem;
+    }
 }
 </style>

@@ -141,4 +141,17 @@ export default {
         justify-content: center;
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .projects-wrapper {
+        padding: 4rem 7rem 0;
+          grid-template-columns: 30% 30% 30%;
+        column-gap: 2rem;
+        -moz-column-gap: 2rem;
+    }
+
+    .our-services {
+        padding: 6rem 8rem 0;
+    }
+}
 </style>
