@@ -203,6 +203,17 @@ export default {
         margin: 0 0 0 auto;
     }
 }
+
+@media screen and (min-width: 700px) {
+    .contact {
+        border-radius: 10px;
+        padding: 4rem;
+
+            h1 {
+                font-size: 2.5rem;
+             }
+    }
+}
 @media screen and (min-width: 1000px) {
     .contact {
         display: grid;
@@ -210,10 +221,7 @@ export default {
         align-items: center;
         column-gap: 2rem;
         -moz-column-gap: 2rem;
-
-        h1 {
-            font-size: 2.5rem;
-        }
+        padding: 4rem 1.5rem;
     }
 }
 

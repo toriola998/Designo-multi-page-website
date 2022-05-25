@@ -11,8 +11,8 @@
             </div>
         </div>
 
-        <div class="bg-black-wrap">
-            <div class="bg-black">
+        <div class="bg-black">
+            <div>
                 <a>
                     <img src="./../assets/shared/desktop/logo-light.png" 
                         alt="Designo - Home"
@@ -98,25 +98,22 @@ export default {
         }
     }
 
-    .bg-black-wrap {
+    .bg-black{
         background-color: #1D1C1E;
-    }
-
-    .bg-black {
-        color: #fff;
         padding: 16rem 1.5rem 4rem;
+        color: #fff;
 
-        nav::before {
-            content: '';
-            @include footer-border;
-            margin: 1.7rem 0 1rem;
-        }
+            nav::before {
+                content: '';
+                @include footer-border;
+                margin: 1.7rem 0 1rem;
+            }
 
-        nav li a {
-            display: block;
-            text-align: center;
-            padding-top: 1.5rem;
-        }
+            nav li a {
+                display: block;
+                text-align: center;
+                padding-top: 1.5rem;
+            }
     }
 
     .footer-logo {
@@ -178,28 +175,31 @@ export default {
 
     .bg-black {
         padding: 16rem 2.5rem 4rem;
-        position: relative;
 
-        nav ul {
-            display: flex;
-            position: absolute;
-            right: 2.5rem;
-            bottom: 13.5rem;
-        }
+            >div {
+                position: relative;
+            }
 
-        nav li a {
-            padding: 0 1rem 0 0;
-        }
+            nav ul {
+                display: flex;
+                position: absolute;
+                right: 0rem;
+                bottom: 10rem;
+            }
 
-        nav::before {
-            display: none;
-        }
+            nav li a {
+                padding: 0 1rem 0 0;
+            }
 
-        nav::after {
-            content: '';
-            @include footer-border;
-            margin: 2rem 0;
-        }
+            nav::before {
+                display: none;
+            }
+
+            nav::after {
+                content: '';
+                @include footer-border;
+                margin: 2rem 0;
+            }
     }
 
     .flex-footer {
@@ -237,12 +237,8 @@ export default {
         padding: 7rem 8rem 0;
     }
 
-    .bg-black {
+    .bg-black-wrap {
         padding: 16rem 8rem 4rem;
-
-        nav ul {
-            right: 8rem;
-        }
     }
 }
 @media screen and (min-width: 1400px) {
