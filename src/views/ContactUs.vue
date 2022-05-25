@@ -1,11 +1,13 @@
 <template>
     <main>
+        <div class="contact-wrap">
         <div class="contact">
-            <h1>Contact Us</h1>
-            <p class="contact-note">Ready to take it to the next level? Let's talk about your project or 
-            idea and find out how we can help your business grow. If you are looking 
-            for unique digital experiences that's relatable to your users, drop us a line.</p>
-        
+            <div>
+                <h1>Contact Us</h1>
+                <p class="contact-note">Ready to take it to the next level? Let's talk about your project or 
+                idea and find out how we can help your business grow. If you are looking 
+                for unique digital experiences that's relatable to your users, drop us a line.</p>
+            </div>
 
             <form @submit.prevent="submitForm()">
                     <div class="input-wrap">
@@ -48,8 +50,9 @@
                         </p>
                     </div>
 
-                    <WhiteButton callToAction="SUBMIT" buttonRole="submit your form"/>
+                    <WhiteButton callToAction="SUBMIT" buttonRole="submit your form" class="call-to-action"/>
             </form>
+        </div>
         </div>
         <LocationLinks />
     </main>
@@ -121,7 +124,7 @@ export default {
     .contact {
         @include bgImage;
        background-size: cover;
-       background-image: url("./../assets/about/mobile/bg-pattern-hero-about-mobile.svg");
+       background-image: url("./../assets/contact/mobile/bg-pattern-hero-contact-mobile.svg");
        padding: 4rem 1.5rem;
 
         h1, 
@@ -172,4 +175,69 @@ export default {
         color: #fff;
         font-size: .7rem;
     }
+
+@media screen and (min-width: 520px) {
+    .contact {
+        padding: 4rem 2.5rem;
+    }
+}
+@media screen and (min-width: 615px) {
+    .contact-wrap {
+        padding: 0 2.5rem;
+    }
+
+    .contact {
+        border-radius: 10px;
+        padding: 4rem 1.5rem;
+        background-size: contain;
+        background-image: url("./../assets/contact/desktop/bg-pattern-hero-desktop.svg");
+
+        h1, 
+        .contact-note {
+            text-align: initial;
+            margin: 1.5rem 0;
+        }
+    }
+
+    .call-to-action {
+        margin: 0 0 0 auto;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .contact {
+        display: grid;
+        grid-template-columns: 50% 45%;
+        align-items: center;
+        column-gap: 2rem;
+        -moz-column-gap: 2rem;
+
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .contact-wrap {
+        padding: 0 8rem;
+    }
+
+    .contact {
+        padding: 4rem ;
+        grid-template-columns: 45% 45%;
+        column-gap: 4rem;
+        -moz-column-gap: 4rem;
+
+        h1 {
+            font-size: 3rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .contact {
+        max-width: 1330px;
+        margin: auto;
+    }
+}
 </style>

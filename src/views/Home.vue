@@ -198,6 +198,15 @@ export default {
        column-gap: 2rem;
    }
 
+    .web-design {
+        height: 600px;
+    }
+
+    .app-design,
+    .graphic-design {
+        height: 290px;
+    }
+
     .grey-bg-top {
         left: 0;
         top: 30rem;
@@ -237,15 +246,6 @@ export default {
 
     .services{
         padding: 6rem 8rem;
-    }
-
-    .web-design {
-        height: 600px;
-    }
-
-    .app-design,
-    .graphic-design {
-        height: 290px;
     }
 
     .grey-bg-top,
