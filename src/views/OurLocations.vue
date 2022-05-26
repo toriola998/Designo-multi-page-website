@@ -45,10 +45,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and (min-width: 615px) {
     .location-container {
         padding: 0 2.5rem;
     }
-    
+}
 @media screen and (min-width: 1000px) {
     .location-container {
         padding: 0 8rem;

@@ -131,7 +131,7 @@ export default {
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1400px) {
     .each-location-wrap {
         max-width: 1330px;
         margin: 0 auto 2rem;
