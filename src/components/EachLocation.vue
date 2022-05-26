@@ -1,7 +1,7 @@
 <template>
     <div class="each-location-wrap">
         <picture>
-            <source media="(min-width: 1000px)" 
+            <source media="(min-width: 1200px)" 
                 :srcset="require(`./../assets/locations/desktop/${mapImage}`)">    
             <source media="(min-width: 615px)" 
                     :srcset="require(`./../assets/locations/tablet/${mapImage}`)">
@@ -107,7 +107,7 @@ export default {
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
     .each-location-wrap {
         display: grid;
         grid-template-columns: auto auto;

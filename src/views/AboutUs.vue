@@ -133,7 +133,6 @@ export default {
             h1, p {
                 text-align: initial;
             }
-
     }
 }
 

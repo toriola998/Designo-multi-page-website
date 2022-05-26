@@ -1,19 +1,21 @@
 <template>
-    <div class="about-info">
-        <picture>
-            <source media="(min-width: 1000px)" 
-                :srcset="require(`./../assets/about/desktop/${aboutImage}`)">    
-            <source media="(min-width: 615px)" 
-                    :srcset="require(`./../assets/about/tablet/${aboutImage}`)">
-            <img :src="require(`./../assets/about/mobile/${aboutImage}`)"  
-                    alt=""
-                    >
-        </picture>
-        <div class="about-bg">
-            <div>
-                <h2>{{ aboutHeading }}</h2>
-                <p> {{ aboutInfo }} </p>  
-                <p>{{ aboutInfo1 }}</p>
+    <div>
+        <div class="about-info">
+            <picture>
+                <source media="(min-width: 1000px)" 
+                    :srcset="require(`./../assets/about/desktop/${aboutImage}`)">    
+                <source media="(min-width: 615px)" 
+                        :srcset="require(`./../assets/about/tablet/${aboutImage}`)">
+                <img :src="require(`./../assets/about/mobile/${aboutImage}`)"  
+                        alt=""
+                        >
+            </picture>
+            <div class="about-bg">
+                <div>
+                    <h2>{{ aboutHeading }}</h2>
+                    <p> {{ aboutInfo }} </p>  
+                    <p>{{ aboutInfo1 }}</p>
+                </div>
             </div>
         </div>
     </div>
@@ -69,8 +71,7 @@ export default {
 @media screen and (min-width: 1000px) {
     .about-info {
         display: grid;
-        margin: 5rem 0;
-
+        grid-template-columns: auto 60%; 
             img {
                 border-top-left-radius: 15px;
                 border-top-right-radius: 0;
@@ -78,8 +79,8 @@ export default {
             }
 
             .about-bg {
-                padding: 4rem;
                 @include flex;
+                padding: 4rem;
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 15px;
                 border-top-right-radius: 15px;
@@ -90,27 +91,10 @@ export default {
             }
     }
 
-    .about-info:nth-child(1) {
-        grid-template-columns: auto 60%; 
+    .about-info:nth-child(2) .about-bg {
+        //grid-template-columns: 60% auto;
+        grid-area: 1;
     }
-
-    .about-info:nth-child(3) {
-        grid-template-columns: 60% auto;
-        .about-bg{
-            grid-area: 1;
-            border-top-left-radius: 15px;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 0px;
-            border-top-right-radius: 0px;
-        }
-
-         img {
-                border-top-left-radius: 0;
-                border-top-right-radius: 15px;
-                border-bottom-left-radius: 0;
-                border-bottom-right-radius: 15px;
-            }
-    } 
 }
 
 @media screen and (min-width: 1200px) {
@@ -127,4 +111,21 @@ export default {
         margin: auto;
     }
 }
+
+
+ // .about-bg{
+        //     grid-area: 1;
+        //     // border-top-left-radius: 15px;
+        //     // border-bottom-left-radius: 15px;
+        //     // border-bottom-right-radius: 0px;
+        //     // border-top-right-radius: 0px;
+        // }
+
+        //  img {
+        //         // border-top-left-radius: 0;
+        //         // border-top-right-radius: 15px;
+        //         // border-bottom-left-radius: 0;
+        //         // border-bottom-right-radius: 15px;
+        //     }
+    //} 
 </style>
