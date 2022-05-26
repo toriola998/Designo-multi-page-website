@@ -81,7 +81,7 @@ export default {
         padding: 3rem 1.5rem;
         border-radius: 15px;
         margin-bottom: -12rem;
-        z-index: 9999;
+        z-index: 999;
         position: relative;
 
         h3 {
