@@ -16,6 +16,7 @@ export default {
 
 <style lang="scss" scoped>
     .why-choose-us {
+        margin-bottom: 4rem;
         img {
             display: block;
             margin: auto;

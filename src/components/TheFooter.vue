@@ -71,7 +71,7 @@ export default {
 <style lang="scss" scoped>
 @import './../assets/scss/partials/_partial.scss';
     .bg-pattern-wrap{
-        padding: 7rem 1.5rem 0;
+        padding: 5rem 1.5rem 0;
     }
 
     .bg-pattern-footer {
@@ -111,10 +111,10 @@ export default {
 
             nav li {
                 padding-top: 1.5rem;
+                text-align: center;
             }
 
             nav li a {
-                text-align: center;
                 color: #fff;
                 text-decoration: none;
             }
@@ -162,7 +162,7 @@ export default {
     }
 @media screen and (min-width: 520px) {
      .bg-pattern-wrap{
-        padding: 7rem 2.5rem 0;
+        padding: 5rem 2.5rem 0;
     }
 
     .bg-pattern-footer {
@@ -192,7 +192,7 @@ export default {
                 display: flex;
                 position: absolute;
                 right: 0rem;
-                bottom: 10rem;
+                bottom: 9.5rem;
             }
 
             nav li {
@@ -247,7 +247,7 @@ export default {
 }
 @media screen and (min-width: 1200px) {
     .bg-pattern-wrap {
-        padding: 7rem 8rem 0;
+        padding: 5rem 8rem 0;
     }
 
     .bg-black{

@@ -111,7 +111,7 @@ export default {
         display: flex !important;
         justify-content: end;
         background-color: initial;
-        top: 0;
+        top: -3px;
         width: auto;
 
             li {

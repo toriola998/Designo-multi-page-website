@@ -6,7 +6,9 @@
                 <p>With over 10 years in the industry, we are experienced in creating 
                 fully responsive websites, app design, and engaging brand experiences. 
                 Find out more about our services.</p>
-                <WhiteButton buttonRole="Learn more about Designo" callToAction="LEARN MORE" />
+                <WhiteButton to="/about-us" 
+                            buttonRole="Learn more about Designo" 
+                            callToAction="LEARN MORE" />
             </div>
             <picture>
                 <!--<source media="(min-width: 700px)" 
@@ -151,7 +153,7 @@ export default {
         padding: 4rem 4rem 0;
 
         h1 {
-            font-size: 2.2rem;
+            font-size: 2.48rem;
             line-height: 1.2;
         }
     }
@@ -169,22 +171,30 @@ export default {
 @media screen and (min-width: 1000px) {
     .home-container {
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 50% 45%;
         column-gap: 5rem;
         background-position: right;
         background-size: contain;
+        padding: 6rem 4rem 0;
 
         div {
-            width: initial
+            width: initial;
+            position: relative;
+            bottom: 5rem;
         }
 
         h1, p {
             @include initial-font;
         }
 
+        p {
+            padding: 2rem 0;
+        }
+
         img {
-            width: 70%;
-            margin: 0;
+            width: 60%;
+            margin: auto;
+            display: block;
         }
     }
 
@@ -214,14 +224,14 @@ export default {
 
    .grey-bg {
         right: 0;
-        bottom: -77rem;
+        bottom: -85rem;
     }
 
     .grey-bg-top,
     .grey-bg {
         position: absolute;
         z-index: -9999;
-        width: 45rem;
+        width: 47rem;
         display: block;
     }
    
@@ -239,9 +249,11 @@ export default {
     }
 
     .home-container {
-        h1 {
-            font-size: 2.5rem;
-        }
+        grid-template-columns: 50% 50%;
+            h1 {
+                font-size: 3rem;
+                line-height: 1;
+            }
     }
 
     .services{

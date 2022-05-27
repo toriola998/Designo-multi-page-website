@@ -1,5 +1,5 @@
 <template>
-    <button class="call-to-action" :aria-label="buttonRole"> {{ callToAction }}</button>
+    <router-link to="" class="call-to-action" :aria-label="buttonRole"> {{ callToAction }} </router-link>
 </template>
 
 <script>
