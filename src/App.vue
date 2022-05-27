@@ -139,15 +139,16 @@ export default {
         -moz-column-gap: 1rem;
         row-gap: 2rem;
         justify-content: center;
+        padding: 7rem 7rem 0;
     }
 }
 
 @media screen and (min-width: 1200px) {
     .projects-wrapper {
-        padding: 4rem 7rem 0;
-          grid-template-columns: 30% 30% 30%;
+        grid-template-columns: 30% 30% 30%;
         column-gap: 2rem;
         -moz-column-gap: 2rem;
+        padding: 9rem 7rem 0;
     }
 
     .our-services {

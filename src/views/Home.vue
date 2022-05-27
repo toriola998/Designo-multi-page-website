@@ -262,9 +262,15 @@ export default {
         padding: 6rem 8rem;
     }
 
+    
+   .grey-bg {
+        right: 0;
+        bottom: -100rem;
+    }
+
     .grey-bg-top,
     .grey-bg {
-        width: 65rem;
+        width: 60rem;
     }
 }
 

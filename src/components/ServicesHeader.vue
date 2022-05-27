@@ -52,10 +52,18 @@ export default {
         }
     }
 }
-
+@media screen and (min-width: 700px) {
+    .bg-pattern-header {
+        h1 { font-size: 2.5rem; }
+    }
+}
 @media screen and (min-width: 1200px) {
     .bg-pattern-container {
         padding: 0 8rem;
+    }
+
+    .bg-pattern-header {
+        h1 { font-size: 2.9rem; }
     }
 }
 </style>
