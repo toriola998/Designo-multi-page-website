@@ -185,6 +185,7 @@ export default {
 
         h1 {
              line-height: 1.1;
+             font-size: 2.5rem;
         }
 
         h1, p {
@@ -254,7 +255,7 @@ export default {
 
     .home-container {
         div {
-            bottom: 5rem;
+            bottom: 4rem;
         }
     }
 
@@ -273,7 +274,13 @@ export default {
         width: 60rem;
     }
 }
-
+@media screen and (min-width: 1290px) {
+    .home-container {
+        h1 {
+            font-size: 2.8rem;
+        }
+    }
+}
 @media screen and (min-width: 1400px) {
     .home-container,
     .why-choose-inner,
