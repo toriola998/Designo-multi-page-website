@@ -81,17 +81,17 @@ export default {
     }
 
     .map {
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .light-bg-pattern {
-        margin-bottom: 4rem;
+        margin-bottom: 5rem;
         padding: 4rem 3rem;
 
         > div > div {
             display: grid;
             grid-template-columns: auto auto;
-            justify-content: space-between;
+            justify-content: flex-start;
             column-gap: 3rem;
         }
     }
@@ -104,6 +104,16 @@ export default {
     .contact,
     .location {
         text-align: initial;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .location {
+        font-size: 2.5rem;
+    }
+
+    address {
+        margin: 2rem 3rem 0 0;
     }
 }
 
@@ -128,6 +138,10 @@ export default {
 
     .light-bg-pattern {
         @include flex;
+    }
+
+    .location {
+        font-size: 3rem;
     }
 }
 

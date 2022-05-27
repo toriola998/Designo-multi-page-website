@@ -237,7 +237,7 @@ export default {
         -moz-column-gap: 4rem;
 
         h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
         }
     }
 }
