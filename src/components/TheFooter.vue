@@ -222,6 +222,12 @@ export default {
     .social-icons {
         margin-top: unset;
     }
+
+    .bg-pattern-footer {
+        h3 {
+            font-size: 2.5rem;
+        }
+    }
 }
 
 @media screen and (min-width: 1000px) {
@@ -248,6 +254,13 @@ export default {
 @media screen and (min-width: 1200px) {
     .bg-pattern-wrap {
         padding: 5rem 8rem 0;
+    }
+
+    .bg-pattern-footer {
+        h3 {
+            font-size: 2.7rem;
+            line-height: 1;
+        }
     }
 
     .bg-black{

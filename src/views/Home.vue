@@ -171,16 +171,20 @@ export default {
 @media screen and (min-width: 1000px) {
     .home-container {
         display: grid;
-        grid-template-columns: 50% 45%;
+        grid-template-columns: 50% 50%;
         column-gap: 5rem;
         background-position: right;
         background-size: contain;
-        padding: 6rem 4rem 0;
+        padding: 7rem 4rem 0;
 
         div {
             width: initial;
             position: relative;
-            bottom: 5rem;
+            bottom: 3rem;
+        }
+
+        h1 {
+             line-height: 1.1;
         }
 
         h1, p {
@@ -188,7 +192,7 @@ export default {
         }
 
         p {
-            padding: 2rem 0;
+            padding: 1.8rem 0;
         }
 
         img {
@@ -249,11 +253,9 @@ export default {
     }
 
     .home-container {
-        grid-template-columns: 50% 50%;
-            h1 {
-                font-size: 3rem;
-                line-height: 1;
-            }
+        div {
+            bottom: 5rem;
+        }
     }
 
     .services{
@@ -262,7 +264,7 @@ export default {
 
     .grey-bg-top,
     .grey-bg {
-        width: 55rem;
+        width: 65rem;
     }
 }
 
