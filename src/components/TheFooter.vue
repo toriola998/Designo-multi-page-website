@@ -13,23 +13,23 @@
 
         <div class="bg-black">
             <div>
-                <a>
+                <router-link to="/">
                     <img src="./../assets/shared/desktop/logo-light.png" 
                         alt="Designo - Home"
                         width="200" 
                         class="footer-logo"/>
-                </a>
+                </router-link>
 
                 <nav>
                     <ul>
                         <li>
-                            <a> OUR COMPANY </a>
+                            <router-link to="/about-us"> OUR COMPANY </router-link>
                         </li>
                         <li>
-                            <a> LOCATIONS </a>
+                            <router-link to="/locations"> LOCATIONS </router-link>
                         </li>
                         <li>
-                            <a> CONTACT </a>
+                            <router-link to="/contact-us"> CONTACT </router-link>
                         </li>
                     </ul>
                 </nav> 
@@ -109,10 +109,18 @@ export default {
                 margin: 1.7rem 0 1rem;
             }
 
-            nav li a {
-                display: block;
-                text-align: center;
+            nav li {
                 padding-top: 1.5rem;
+            }
+
+            nav li a {
+                text-align: center;
+                color: #fff;
+                text-decoration: none;
+            }
+
+            nav li a:hover {
+                border-bottom: .5px solid #fff ;
             }
     }
 
@@ -187,8 +195,8 @@ export default {
                 bottom: 10rem;
             }
 
-            nav li a {
-                padding: 0 1rem 0 0;
+            nav li {
+                padding: 0 0 0 1rem;
             }
 
             nav::before {
@@ -230,6 +238,11 @@ export default {
         h3, p {
             text-align: initial;
         }
+    }
+    .bg-black {
+            nav li {
+                padding: 0 0 0 2rem;
+            }
     }
 }
 @media screen and (min-width: 1200px) {
