@@ -9,20 +9,30 @@
             </router-link>
 
             <nav>
-                <button @click="showNav = !showNav"  class="menu">
-                    <img src="./../assets/shared/mobile/icon-hamburger.svg" alt=""/>
+                <button @click="showNav = !showNav"  
+                        class="menu"  
+                        aria-label="Toggle Menu" 
+                        aria-expanded="false"
+                        aria-controls="mainNavLinks">
+                    <img src="./../assets/shared/mobile/icon-hamburger.svg" alt="" role="presentation"/>
                 </button>
 
                 <!--<teleport to="body">-->
-                    <div class="nav-overlay" v-show="showNav" @click="showNav = !showNav"> </div>
-                    <ul  class="nav-bar" v-show="showNav">
-                        <li>
-                            <router-link to="/about-us">OUR COMPANY</router-link></li>
-                        <li>
-                            <router-link to="/locations">LOCATIONS</router-link></li>
-                        <li>
-                            <router-link to="/contact-us">CONTACT</router-link></li>
-                    </ul>
+                    <div id="mainNavLinks" 
+                        class="links" 
+                        aria-labelledby="mainNavHeading" 
+                        aria-live="polite">
+                        <h2 id="mainNavHeading" hidden>Main menu</h2>
+                        <div class="nav-overlay" v-show="showNav" @click="showNav = !showNav"> </div>
+                        <ul  class="nav-bar" v-show="showNav">
+                            <li>
+                                <router-link @click="showNav = !showNav" to="/about-us">OUR COMPANY</router-link></li>
+                            <li>
+                                <router-link @click="showNav = !showNav" to="/locations">LOCATIONS</router-link></li>
+                            <li>
+                                <router-link @click="showNav = !showNav" to="/contact-us">CONTACT</router-link></li>
+                        </ul>
+                    </div>
                 <!--</teleport>-->
             </nav>
         </div>
