@@ -24,7 +24,7 @@
             </div>
         </header>
         <main>
-            <div class="about-wrapper"> 
+            <div class="about-wrapper about1"> 
                 <AboutInfo aboutImage="image-world-class-talent.jpg" 
                         aboutHeading="World-class talent" 
                         aboutInfo="We are a crew of strategists, problem-solvers, and technologists. Every 
@@ -39,7 +39,7 @@
             </div>
             <Location-links />
             
-            <div class="about-wrapper"> 
+            <div class="about-wrapper  about2"> 
                 <AboutInfo aboutImage="image-real-deal.jpg" 
                         aboutHeading="The real deal" 
                         aboutInfo=" As strategic partners in our clients. businesses, we are ready to take on any 
@@ -73,7 +73,6 @@ export default {
     
     .about {
        @include bgImage;
-       background-size: cover;
        background-image: url("./../assets/about/mobile/bg-pattern-hero-about-mobile.svg");
        padding: 4rem 1.5rem;
 
@@ -92,6 +91,10 @@ export default {
         padding: 0 2.5rem; 
     }
 
+    main {
+        padding: 4rem 0;
+    }
+
     header {
         margin-bottom: 2rem;
 
@@ -106,7 +109,11 @@ export default {
         border-bottom-right-radius: 15px;
     }
 }
-
+@media screen and (min-width: 700px) {
+     .about{
+        h1{ font-size: 2.5rem }
+    }
+}
 @media screen and (min-width: 1000px) {
     header {
         >div {
@@ -123,6 +130,9 @@ export default {
     }
 
     .about{
+        background-size: cover;
+        background-position: bottom;
+        background-image: url("./../assets/about/desktop/bg-pattern-hero-about-desktop.svg");
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 0;
         border-top-left-radius: 15px;
@@ -134,12 +144,19 @@ export default {
                 text-align: initial;
             }
     }
+
+    .about1 { margin-bottom: 2rem; }
+    .about2 { margin-top: 2rem; }
 }
 
 @media screen and (min-width: 1200px) {
     header,
     .about-wrapper {
         padding: 0 8rem;
+    }
+
+    main {
+        padding: 6rem 0;
     }
 
     .about {

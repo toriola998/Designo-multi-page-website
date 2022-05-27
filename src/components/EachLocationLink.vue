@@ -4,7 +4,7 @@
             :alt="locationAltText"
         />
         <h2>{{ locationName }}</h2>
-        <router-link to="/" 
+        <router-link to="/locations" 
                     :aria-label="locationLinkLabel"> SEE LOCATION
         </router-link>
     </div>
@@ -38,6 +38,10 @@ export default {
             @include flex;
             background-color: var(--dark-peach);
             color: white;
+        }
+
+        a:hover {
+            background-color: var(--hover-peach);
         }
     }
 </style>

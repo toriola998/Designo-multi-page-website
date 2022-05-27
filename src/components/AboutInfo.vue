@@ -67,7 +67,11 @@ export default {
         }
     }
 }
-
+@media screen and (min-width: 1000px) {
+    .about-info {
+        h2 {font-size: 2.3rem;}
+    }
+}
 @media screen and (min-width: 1000px) {
     .about-info {
         display: grid;
