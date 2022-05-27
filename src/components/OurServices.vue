@@ -51,7 +51,7 @@ export default {
     .overlay:hover {
         background:rgba(231, 129, 107, 0.6);    
     }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1000px) {
     .overlay {
         h2 {
             font-size: 2.5rem;

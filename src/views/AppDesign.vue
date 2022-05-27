@@ -65,21 +65,5 @@ export default {
 </script>
 
 <style scoped>
-   @media screen and (min-width: 615px) {
-     .design {
-        height: 290px;
-    }
-}
-
-@media screen and (min-width: 1000px) {
-    .design {
-        height: 290px;
-    }
-
-    .our-services {
-        display: grid;
-        column-gap: 1rem ;
-        grid-template-columns: auto auto;
-    }
-}
+    @import './../assets/css/design-pages.css';
 </style>
