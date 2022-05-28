@@ -1,15 +1,17 @@
 <template>
     <div>
         <div class="about-info">
-            <picture>
-                <source media="(min-width: 1000px)" 
-                    :srcset="require(`./../assets/about/desktop/${aboutImage}`)">    
-                <source media="(min-width: 615px)" 
-                        :srcset="require(`./../assets/about/tablet/${aboutImage}`)">
-                <img :src="require(`./../assets/about/mobile/${aboutImage}`)"  
-                        alt=""
-                        >
-            </picture>
+            <div class="about-img-wrap">
+                <picture>
+                    <source media="(min-width: 1000px)" 
+                        :srcset="require(`./../assets/about/desktop/${aboutImage}`)">    
+                    <source media="(min-width: 615px)" 
+                            :srcset="require(`./../assets/about/tablet/${aboutImage}`)">
+                    <img :src="require(`./../assets/about/mobile/${aboutImage}`)"  
+                            alt=""
+                            >
+                </picture>
+            </div>
             <div class="about-bg">
                 <div>
                     <h2>{{ aboutHeading }}</h2>
@@ -29,10 +31,6 @@ export default {
 
 <style lang="scss" scoped>
 @import './../assets/scss/partials/_partial.scss';
-    img {
-       @extend %image-block;
-    }
-    
     .about-info {
         .about-bg {
             @include bgImage($bg-color: var(--light-peach));
@@ -53,6 +51,20 @@ export default {
                 padding-top: 2rem;
                 color: var(--color-black);
             }
+
+            .about-img-wrap {
+                @extend %image-wrap;
+                padding-bottom: 320 / 375 * 100%; //This is to solve page layout shift
+            }
+
+            .about-img-wrap::before{
+                @extend %image-wrap-pseudo;
+            }
+
+            img {
+                @extend %image-block;
+                @extend %image-wrap-content;
+            }
     }
    
 @media screen and (min-width: 615px) {
@@ -65,8 +77,13 @@ export default {
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
         }
+
+        .about-img-wrap {
+            padding-bottom: 320 / 689 * 100%; //This is to solve page layout shift
+        }
     }
 }
+
 @media screen and (min-width: 1000px) {
     .about-info {
         h2 {font-size: 2.3rem;}
@@ -92,6 +109,10 @@ export default {
 
             h2, p {
                 text-align: initial;
+            }
+
+            .about-img-wrap {
+                padding-bottom: 640 / 476 * 100%; //This is to solve page layout shift
             }
     }
 
