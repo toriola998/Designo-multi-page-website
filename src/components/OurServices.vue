@@ -4,7 +4,9 @@
             <h2>{{ service }}</h2>
             <p :aria-label="serviceInfo">VIEW PROJECTS 
                 <span>
-                    <img src="./../assets/shared/desktop/icon-right-arrow.svg" alt=""/>
+                    <img src="./../assets/shared/desktop/icon-right-arrow.svg" 
+                         alt=""
+                         width="7" height="10"/>
                 </span>
             </p>
         </div>

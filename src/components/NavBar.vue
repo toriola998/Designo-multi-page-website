@@ -4,7 +4,7 @@
             <router-link to="/">
                 <img src="./../assets/shared/desktop/logo-dark.png" 
                     alt="Designo - Home"
-                    width="200"
+                    width="200" height="26.72"
                     />
             </router-link>
 
@@ -14,7 +14,9 @@
                         aria-label="Toggle Menu" 
                         aria-expanded="false"
                         aria-controls="mainNavLinks">
-                    <img src="./../assets/shared/mobile/icon-hamburger.svg" alt="" role="presentation"/>
+                    <img src="./../assets/shared/mobile/icon-hamburger.svg" 
+                         alt="" role="presentation"
+                         width="24" height="20"/>
                 </button>
 
                 <!--<teleport to="body"> --aria-labelledby="mainNavHeading"  

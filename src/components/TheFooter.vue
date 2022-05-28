@@ -15,8 +15,8 @@
             <div>
                 <router-link to="/">
                     <img src="./../assets/shared/desktop/logo-light.png" 
-                        alt="Designo - Home"
-                        width="200" 
+                        alt="Designo - Home" 
+                        width="200" height="26.72"
                         class="footer-logo"/>
                 </router-link>
 
@@ -47,11 +47,21 @@
                     </div>
                     
                     <div class="social-icons">
-                        <img src="./../assets/shared/desktop/icon-facebook.svg" alt="Follow us on facebook" />
-                        <img src="./../assets/shared/desktop/icon-youtube.svg" alt="Subscribe to our youTube channel" />
-                        <img src="./../assets/shared/desktop/icon-twitter.svg" alt="Follow us on twitter" />
-                        <img src="./../assets/shared/desktop/icon-pinterest.svg" alt="Check us on Pinterest" />
-                        <img src="./../assets/shared/desktop/icon-instagram.svg" alt="Follow us on Instagram" />
+                        <img src="./../assets/shared/desktop/icon-facebook.svg" 
+                             alt="Follow us on facebook" 
+                             width="24" height="24" />
+                        <img src="./../assets/shared/desktop/icon-youtube.svg" 
+                             alt="Subscribe to our youTube channel" 
+                             width="24" height="24" />
+                        <img src="./../assets/shared/desktop/icon-twitter.svg" 
+                             alt="Follow us on twitter"  
+                             width="24" height="24" />
+                        <img src="./../assets/shared/desktop/icon-pinterest.svg" 
+                             alt="Check us on Pinterest" 
+                             width="24" height="24" />
+                        <img src="./../assets/shared/desktop/icon-instagram.svg" 
+                             alt="Follow us on Instagram" 
+                             width="24" height="24" />
                     </div>
                 </div>
             </div>

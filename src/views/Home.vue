@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="home-container">
-            <div>
+            <div class="home-content">
                 <h1>Award-winning custom designs and digital branding solutions</h1>
                 <p>With over 10 years in the industry, we are experienced in creating 
                 fully responsive websites, app design, and engaging brand experiences. 
@@ -10,16 +10,18 @@
                             buttonRole="Learn more about Designo" 
                             callToAction="LEARN MORE" />
             </div>
-            <picture>
-                <!--<source media="(min-width: 700px)" 
-                        srcset="require(`@/assets/portfolio/desktop/${filename}.jpg`)">-->
-                <source media="(min-width: 1000px)" 
-                        srcset="./../assets/home/desktop/image-hero-phone.png">
-                <img src="./../assets/home/mobile/image-hero-mobile.png"
-                        alt=""
-                        class="hero-image"
-                        >
-            </picture> 
+            <div class="image-wrap">
+                <picture>
+                    <!--<source media="(min-width: 700px)" 
+                            srcset="require(`@/assets/portfolio/desktop/${filename}.jpg`)">-->
+                    <source media="(min-width: 1000px)" 
+                            srcset="./../assets/home/desktop/image-hero-phone.png">
+                    <img src="./../assets/home/mobile/image-hero-mobile.png"
+                            alt=""
+                            class="hero-image"
+                            >
+                </picture>
+            </div> 
         </div>
     </header>
     <main>
@@ -104,12 +106,25 @@ export default {
 
             p { 
                 padding: 1rem 0;
-             }
+            }
+
+            .home-content {
+                padding-bottom: 5rem
+            }
+
+            .image-wrap {
+                @extend %image-wrap;
+                padding-bottom: 1113 / 852 * 100%; //This is to solve page layout shift
+            }
+
+            .image-wrap::before {
+                @extend %image-wrap-pseudo;
+            }
  
             img {
+                @extend %image-wrap-content;
                 width: 100%;
-                margin: 5rem 0 -0.4rem 0;
-                filter: drop-shadow(20px -40px 50px rgba(93, 2, 2, 0.497569));
+                filter: drop-shadow(20px -40px 50px rgba(93, 2, 2, 0.397569));
             }
     }
 
@@ -136,9 +151,14 @@ export default {
         border-radius: 7px;
         padding: 4rem 3rem 0;
 
+        .image-wrap { 
+            padding-bottom: 1113 / 852 * 55%;   //This is to solve page layout shift
+        }
+
         img {
-            width: 50%;
-            margin: 5rem auto -0.4rem;
+            width: 55%;
+            right: 0;
+            margin: auto;
             display: block;
         }
     }
@@ -161,7 +181,7 @@ export default {
 
 @media screen and (min-width: 700px) {
     .home-container {
-        div {
+        .home-content{
             width: 500px;
             margin: auto;
         }
@@ -177,10 +197,14 @@ export default {
         background-size: contain;
         padding: 7rem 4rem 0;
 
-        div {
+        .home-content {
             width: initial;
             position: relative;
-            bottom: 3rem;
+            bottom: 1rem;
+        }
+
+        .image-wrap {
+            padding-bottom: 501 / 280 * 60%; //This is to solve page layout shift
         }
 
         h1 {
@@ -198,8 +222,6 @@ export default {
 
         img {
             width: 60%;
-            margin: auto;
-            display: block;
         }
     }
 
@@ -253,11 +275,6 @@ export default {
         padding: 0 8rem;
     }
 
-    .home-container {
-        div {
-            bottom: 4rem;
-        }
-    }
 
     .services{
         padding: 6rem 8rem;
