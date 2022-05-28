@@ -1,8 +1,11 @@
 <template>
     <div>
         <div class="each-project">
-            <img :src="require(`./../assets/${projectImage}`)" 
-                 :alt="projectAltText"/>
+            <div class="project-img">
+                <img :src="require(`./../assets/${projectImage}`)" 
+                 :alt="projectAltText"
+                />
+            </div>
             <div class="bg-peach">
                 <div>
                     <h2> {{projectName}} </h2>
@@ -24,7 +27,17 @@ export default {
     .each-project {
         margin-top: 2rem;
 
+        .project-img {
+             @extend %image-wrap;
+            padding-bottom: 640 / 700 * 100%; //This is to solve page layout shift
+        }
+
+        .project-img::before {
+            @extend %image-wrap-pseudo;
+        }
+
         img {
+            @extend %image-wrap-content;
             @extend %image-block;
             border-top-left-radius: 15px;
             border-top-right-radius: 15px ;
