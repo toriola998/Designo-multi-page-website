@@ -2,15 +2,17 @@
     <div>
         <header>
             <div>
-                <picture>
-                    <source media="(min-width: 1000px)" 
-                        :srcset="require(`./../assets/about/desktop/image-about-hero.jpg`)">    
-                    <source media="(min-width: 615px)" 
-                            :srcset="require(`./../assets/about/tablet/image-about-hero.jpg`)">
-                    <img :src="require(`./../assets/about/mobile/image-about-hero.jpg`)"  
-                            alt=""
-                            >
-                </picture>
+                <div class="hero-about-img">
+                    <picture>
+                        <source media="(min-width: 1000px)" 
+                            :srcset="require(`./../assets/about/desktop/image-about-hero.jpg`)">    
+                        <source media="(min-width: 615px)" 
+                                :srcset="require(`./../assets/about/tablet/image-about-hero.jpg`)">
+                        <img :src="require(`./../assets/about/mobile/image-about-hero.jpg`)"  
+                                alt=""
+                                >
+                    </picture>
+                </div>
                 <div class="about">
                     <div>
                         <h1>About Us</h1>
@@ -66,11 +68,20 @@ export default {
 
 <style lang="scss" scoped>
 @import './../assets/scss/partials/_partial.scss';
-    img {
-        width: 100%;
-        display: block;
+    .hero-about-img {
+        @extend %image-wrap;
+        padding-bottom: 320 / 375 * 100%; //This is to solve page layout shift
+        
+        img {
+            @extend %image-block;
+            @extend %image-wrap-content;
+        }
     }
     
+    .hero-about-img::before{
+        @extend %image-wrap-pseudo;
+    }
+
     .about {
        @include bgImage;
        background-image: url("./../assets/about/mobile/bg-pattern-hero-about-mobile.svg");
@@ -97,17 +108,22 @@ export default {
 
     header {
         margin-bottom: 2rem;
-
-        img  {
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-     }
     }
 
     .about{
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
     }
+
+    .hero-about-img {
+        padding-bottom: 320 / 689 * 100%; //This is to solve page layout shift
+        
+        img {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+    }
+    
 }
 @media screen and (min-width: 700px) {
      .about{
@@ -119,13 +135,6 @@ export default {
         >div {
             display: grid;
             grid-template-columns: 60% auto;
-         ;
-        }
-        
-        img  {
-            border-top-left-radius: 0px;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
         }
     }
 
@@ -147,6 +156,15 @@ export default {
 
     .about1 { margin-bottom: 2rem; }
     .about2 { margin-top: 2rem; }
+
+    .hero-about-img {
+         padding-bottom: 480 / 476 * 100%; //This is to solve page layout shift
+          img  {
+            border-top-left-radius: 0px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+    }
 }
 
 @media screen and (min-width: 1200px) {
