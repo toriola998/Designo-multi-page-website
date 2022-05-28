@@ -1,6 +1,6 @@
 <template>
     <div class="why-choose-us">
-        <img :src="require(`./../assets/home/desktop/${illustration}`)" />
+        <img :src="require(`./../assets/home/desktop/${illustration}`)" alt=""/>
         <div>
             <h3>{{ serviceTitle }}</h3>
             <p> {{ serviceInfo }}</p>

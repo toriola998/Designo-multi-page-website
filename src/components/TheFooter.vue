@@ -41,8 +41,8 @@
                         </address>
 
                         <p class="contact">Contact Us (Central Office) <br>
-                            <a href=""> P : +1 253-863-8967</a>
-                            <a href=""> M : contact@designo.co </a>
+                            <a href="tel:+05890000111"> P : +1 253-863-8967</a>
+                            <a href="contact@designo.co"> M : contact@designo.co </a>
                         </p>
                     </div>
                     

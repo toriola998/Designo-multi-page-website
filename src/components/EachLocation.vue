@@ -18,8 +18,8 @@
                     </address>
 
                     <p class="contact">Contact <br>
-                        <a href="">{{ number }}</a>
-                        <a href=""> {{ email}} </a>
+                        <a href="tel:+05890000111">{{ number }}</a>
+                        <a href="contact@designo.co"> {{ email}} </a>
                     </p>
                 </div>
             </div>

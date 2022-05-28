@@ -17,12 +17,11 @@
                     <img src="./../assets/shared/mobile/icon-hamburger.svg" alt="" role="presentation"/>
                 </button>
 
-                <!--<teleport to="body">-->
+                <!--<teleport to="body"> --aria-labelledby="mainNavHeading"  
+                <h2 id="mainNavHeading" hidden>Main menu</h2>-->
                     <div id="mainNavLinks" 
                         class="links" 
-                        aria-labelledby="mainNavHeading" 
                         aria-live="polite">
-                        <h2 id="mainNavHeading" hidden>Main menu</h2>
                         <div class="nav-overlay" v-show="showNav" @click="showNav = !showNav"> </div>
                         <ul  class="nav-bar" v-show="showNav">
                             <li>
@@ -62,7 +61,7 @@ export default {
 
     .nav-bar {
         background-color: var(--color-black);
-        padding: 3rem 0 2rem 1.5rem;
+        padding: 4rem 0 2.5rem 1.5rem;
         position: absolute;
         top: 5rem;
         right: 0;
@@ -92,7 +91,7 @@ export default {
         z-index: 9999;
         width: 100vw;
         height: 100%;
-        background-color: rgba(0,0,0, 0.45);
+        background-color: rgba(0,0,0, 0.25);
 
     }
 @media screen and (min-width: 615px) {
