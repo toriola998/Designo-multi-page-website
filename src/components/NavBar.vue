@@ -122,7 +122,7 @@ export default {
         display: flex !important;
         justify-content: end;
         background-color: initial;
-        top: -3px;
+        top: -16px;
         width: auto;
 
             li {

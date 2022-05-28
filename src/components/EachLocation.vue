@@ -1,14 +1,16 @@
 <template>
     <div class="each-location-wrap">
-        <picture>
-            <source media="(min-width: 1200px)" 
-                :srcset="require(`./../assets/locations/desktop/${mapImage}`)">    
-            <source media="(min-width: 615px)" 
-                    :srcset="require(`./../assets/locations/tablet/${mapImage}`)">
-            <img :src="require(`./../assets/locations/desktop/${mapImage}`)"  
-                    :alt="mapAltText" 
-                    class="map" >
-        </picture>
+        <div class="map-wrap">
+            <picture>
+                <source media="(min-width: 1200px)" 
+                    :srcset="require(`./../assets/locations/desktop/${mapImage}`)">    
+                <source media="(min-width: 615px)" 
+                        :srcset="require(`./../assets/locations/tablet/${mapImage}`)">
+                <img :src="require(`./../assets/locations/desktop/${mapImage}`)"  
+                        :alt="mapAltText" 
+                        class="map" >
+            </picture>
+        </div>
         <div class="light-bg-pattern">
             <div>
                 <h2 class="location">{{ country }}</h2>
@@ -42,8 +44,18 @@ export default {
        padding: 4rem 1.5rem;
     }
 
+    .map-wrap {
+        @extend %image-wrap;
+        padding-bottom: 320 / 375 * 100%; //This is to solve page layout shift
+    }
+
+    .map-wrap::before {
+        @extend %image-wrap-pseudo;
+    }
+
     .map {
         @extend %image-block;
+        @extend %image-wrap-content;
     }
 
     .location {
@@ -80,12 +92,12 @@ export default {
         border-radius: 10px;
     }
 
-    .map {
-        margin-bottom: 1.5rem;
+    .map-wrap {
+        padding-bottom: 326 / 689  * 100%; //This is to solve page layout shift
     }
 
     .light-bg-pattern {
-        margin-bottom: 5rem;
+        margin: 1.5rem 0 5rem;
         padding: 4rem 3rem;
 
         > div > div {
@@ -120,9 +132,13 @@ export default {
 @media screen and (min-width: 1200px) {
     .each-location-wrap {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 35% 65%;
         gap: 2rem;
         margin-bottom: 2rem;
+    }
+
+    .map-wrap {
+        padding-bottom: 320 / 375 * 100%; //This is to solve page layout shift
     }
 
     /**REVERSE THE 1st & 3rd LOCATIONS */
@@ -131,13 +147,18 @@ export default {
        grid-area: 1;
     }
 
-    .map,
-    .light-bg-pattern {
+    .each-location-wrap:nth-child(1), 
+    .each-location-wrap:nth-child(3) {
+        grid-template-columns: 65% 35%;
+    }
+
+    .map {
         margin-bottom: initial;
     }
 
     .light-bg-pattern {
         @include flex;
+        margin: initial;
     }
 
     .location {
