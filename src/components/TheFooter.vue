@@ -7,7 +7,9 @@
                     <p>Ready to take it to the next level? Contact us today and find 
                     out how our expertise can help your business grow.</p>
                 </div>
-                <WhiteButton buttonRole="Get in touch with us at Designo" callToAction="GET IN TOUCH" />
+                <WhiteButton to="/contact-us" 
+                             buttonRole="Get in touch with us at Designo" 
+                             callToAction="GET IN TOUCH" />
             </div>
         </div>
 

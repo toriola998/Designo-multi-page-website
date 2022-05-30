@@ -49,8 +49,8 @@
                             <img src="./../assets/contact/desktop/icon-error.svg" alt=""/>
                         </p>
                     </div>
-
-                    <WhiteButton callToAction="SUBMIT" buttonRole="submit your form" class="call-to-action"/>
+                    
+                    <button aria-label="submit your form" class="call-to-action">SUBMIT</button>
             </form>
         </div>
         </div>
@@ -61,10 +61,9 @@
 
 <script>
 import LocationLinks from '../components/LocationLinks.vue';
-import WhiteButton from '../components/WhiteButton.vue'
 export default {
     name: 'Contact Us',
-    components: { LocationLinks , WhiteButton },
+    components: { LocationLinks },
     data () {
         return {
             name: "",
@@ -174,6 +173,18 @@ export default {
         width: 82px;
         color: #fff;
         font-size: .7rem;
+    }
+
+    .call-to-action {
+        @include flex;
+        @extend %cta-btn;
+        background-color: #fff;
+        color: var(--black-color);      
+    }
+
+    .call-to-action:hover {
+        background-color: var(--hover-peach);
+        color: #fff;
     }
 
 @media screen and (min-width: 520px) {
