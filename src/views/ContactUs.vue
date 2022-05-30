@@ -69,6 +69,8 @@ export default {
             name: "",
             email: "",
             message: "",
+            phone: "",
+            phoneError: "",
             nameError: false,
             emailError: false,
             invalidEmailError: false,
