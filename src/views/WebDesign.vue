@@ -46,11 +46,11 @@
             <div class="our-services">
                 <div class="app-design design" 
                     @click="this.$router.push({ path: '/app-design'})">
-                    <OurServices service="APP DESIGN" serviceInfo="view some of Designo's app design projects" />
+                    <OurServices service="APP DESIGN" />
                 </div>
                 <div class="graphic-design design"
                     @click="this.$router.push({ path: '/graphic-design'})">
-                    <OurServices service="GRAPHIC DESIGN" serviceInfo="view some of Designo's web design projects" />
+                    <OurServices service="GRAPHIC DESIGN" />
                 </div>
             </div>
         </section>

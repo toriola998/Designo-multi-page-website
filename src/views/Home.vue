@@ -31,16 +31,16 @@
                 <div class="services-inner">
                     <div class="web-design design" 
                         @click="this.$router.push({ path: '/web-design'})">
-                        <OurServices service="WEB DESIGN" serviceInfo="view some of Designo's web design projects" />
+                        <OurServices service="WEB DESIGN" />
                     </div>
                     <div>
                         <div class="app-design design"
                             @click="this.$router.push({ path: '/app-design'})">
-                            <OurServices service="APP DESIGN" serviceInfo="view some of Designo's application design projects" />
+                            <OurServices service="APP DESIGN" />
                         </div>
                         <div class="graphic-design design"
                             @click="this.$router.push({ path: '/graphic-design'})">
-                            <OurServices service="GRAPHIC DESIGN" serviceInfo="view some of Designo's web design projects" />
+                            <OurServices service="GRAPHIC DESIGN" />
                         </div>
                     </div>
                 </div>
@@ -275,7 +275,15 @@ export default {
         padding: 0 8rem;
     }
 
+   .web-design {
+        height: 640px;
+    }
 
+    .app-design,
+    .graphic-design {
+        height: 310px;
+    }
+    
     .services{
         padding: 6rem 8rem;
     }

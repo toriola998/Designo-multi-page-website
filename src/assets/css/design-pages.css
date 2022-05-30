@@ -5,13 +5,15 @@
 }
 
 @media screen and (min-width: 1000px) {
-   .design {
-       height: 290px;
-   }
-
    .our-services {
        display: grid;
        column-gap: 1rem ;
        grid-template-columns: auto auto;
    }
+}
+
+@media screen and (min-width: 1200px) {
+    .design {
+        height: 310px;
+    }
 }
