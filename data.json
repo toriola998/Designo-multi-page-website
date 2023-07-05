@@ -1,0 +1,37 @@
+[
+    {
+        "image": "app-design/desktop/image-airfilter.jpg",
+        "name": "AIR FILTER",
+        "description": "Solving the problem of poor indoor air quality by filtering the air",
+        "alt": "A screenshot of the air filter app",
+        "category": "app"
+    },
+    {
+        "image": "app-design/desktop/image-eyecam.jpg",
+        "name": "EYE CAM",
+        "description": "Product that lets you edit your favorite photos and videos at any time",
+        "alt": "A screenshot of the eye cam app",
+        "category": "app"
+    },
+    {
+        "image": "app-design/desktop/image-faceit.jpg",
+        "name": "FACE IT",
+        "description": "Get to meet your favorite internet superstar with the faceit app",
+        "alt": "A screenshot of the face it app",
+        "category": "app"
+    },
+    {
+        "image": "app-design/desktop/image-todo.jpg",
+        "name": "TODO APP",
+        "description": "A todo app that features cloud sync with light and dark mode",
+        "alt": "A screenshot of the todo app",
+        "category": "app"
+    },
+    {
+        "image": "app-design/desktop/image-loopstudios.jpg",
+        "name": "LOOPSTUDIOS",
+        "description": "A VR experience app made for Loopstudios",
+        "alt": "A screenshot of the loopstudios app",
+        "category": "app"
+    }
+]

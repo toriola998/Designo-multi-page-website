@@ -29,19 +29,16 @@
         <section aria-label="Services we render in Designo"> 
             <div class="services">
                 <div class="services-inner">
-                    <div class="web-design design" 
-                        @click="this.$router.push({ path: '/web-design'})">
+                    <router-link to="/web-design" class="web-design design">
                         <OurServices service="WEB DESIGN" />
-                    </div>
+                    </router-link>
                     <div>
-                        <div class="app-design design"
-                            @click="this.$router.push({ path: '/app-design'})">
+                        <router-link to="/app-design" class="app-design design">
                             <OurServices service="APP DESIGN" />
-                        </div>
-                        <div class="graphic-design design"
-                            @click="this.$router.push({ path: '/graphic-design'})">
+                        </router-link>
+                        <router-link to="/graphic-design" class="graphic-design design">
                             <OurServices service="GRAPHIC DESIGN" />
-                        </div>
+                        </router-link>
                     </div>
                 </div>
             </div>
@@ -135,6 +132,8 @@ export default {
                 filter: drop-shadow(20px -40px 50px rgba(93, 2, 2, 0.397569));
             }
     }
+
+    .design { display: block; }
 
     .services {
         padding: 6rem 1.5rem;
