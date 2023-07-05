@@ -33,5 +33,26 @@
         "description": "A VR experience app made for Loopstudios",
         "alt": "A screenshot of the loopstudios app",
         "category": "app"
+    },
+    {
+        "image": "graphic-design/desktop/image-change.jpg",
+        "name": "TIM BROWN",
+        "description": "A book cover designed for Tim Brown's new release, 'Change'",
+        "alt": "An image of the Tim Brown book cover",
+        "category": "graphic"
+    },
+    {
+        "image": "graphic-design/desktop/image-boxed-water.jpg",
+        "name": "BOXED WATER",
+        "description": "A simple packaging concept made for Boxed Water",
+        "alt": "Product designs for Box water package",
+        "category": "graphic"
+    },
+    {
+        "image": "graphic-design/desktop/image-science.jpg",
+        "name": "SCIENCE!",
+        "description": "A poster made in collaboration with the Federal Art Project",
+        "alt": "A poster made in collaboration with the Federal Art Project",
+        "category": "graphic"
     }
 ]

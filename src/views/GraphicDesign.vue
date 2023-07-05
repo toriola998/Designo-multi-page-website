@@ -1,55 +1,56 @@
 <template>
     <header>
-        <ServicesHeader title="Graphic Design" 
-                        description="We deliver eye-catching branding materials that are 
-                        tailored to meet your business objectives." />
+        <ServicesHeader 
+            title="Graphic Design" 
+            description="We deliver eye-catching branding materials that are tailored to meet your business objectives." />
     </header>
     <main>
         <section aria-label="some of the Graphics designs done by Designo">
             <div class="projects-wrapper">
-                <ProjectDetails projectImage="graphic-design/desktop/image-change.jpg"
-                                projectName="TIM BROWN" 
-                                projectInfo="A book cover designed for Tim Brown's new release, 'Change'" 
-                                projectAltText="An image of the Tim Brown book cover"
-                            />
-                <ProjectDetails projectImage="graphic-design/desktop/image-boxed-water.jpg"
-                                projectName="BOXED WATER" 
-                                projectInfo="A simple packaging concept made for Boxed Water" 
-                                projectAltText="Product designs for Box water package" 
-                            />
-                <ProjectDetails projectImage="graphic-design/desktop/image-science.jpg"
-                                projectName="SCIENCE!" 
-                                projectInfo="A poster made in collaboration with the Federal Art Project" 
-                                projectAltText="A poster made in collaboration with the Federal Art Project" 
-                            />
+                <ProjectDetails v-for="(item, index) in filteredData" :key="index"
+                    :projectImage="item.image"
+                    :projectName="item.name" 
+                    :projectInfo="item.description" 
+                    :projectAltText="item.alt"
+                />
             </div>
         </section>
 
         <section aria-label="Other services we render at Designo">
             <div class="our-services">
-                <div class="app-design design"
-                    @click="this.$router.push({ path: '/app-design'})">
+                <router-link to="/app-design" class="app-design design">
                     <OurServices service="APP DESIGN" />
-                </div>
-                <div class="web-design design"
-                    @click="this.$router.push({ path: '/web-design'})">
+                </router-link>
+                <router-link to="/web-design" class="web-design design">
                     <OurServices service="WEB DESIGN" />
-                </div>
+                </router-link>
             </div>
         </section> 
     </main>
 </template>
 
 <script>
+import data from './../../data.json'
 import ProjectDetails from './../components/ProjectDetails.vue';
 import ServicesHeader from './../components/ServicesHeader.vue'
 import OurServices from './../components/OurServices.vue'
 export default {
-   components: {
-       ServicesHeader,
-       ProjectDetails,
-       OurServices
-   }
+    name: 'Graphic Design',
+    data() {
+        return {
+            data: data
+        }
+    },
+    computed: {
+        filteredData() {
+            return this.data.filter(item => item.category === 'graphic');
+        }
+    },
+    components: {
+        ServicesHeader,
+        ProjectDetails,
+        OurServices
+    }
 }
 </script>
 

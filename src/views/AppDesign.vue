@@ -7,14 +7,12 @@
     <main>
         <section aria-label="some of the application designs done by Designo">
             <div class="projects-wrapper">
-                <div v-for="(item, index) in data" :key="index">
-                    <ProjectDetails v-if="item.category === 'app'"
-                        :projectImage="item.image"
-                        :projectName="item.name" 
-                        :projectInfo="item.description" 
-                        :projectAltText="item.alt"
-                    />
-                </div>
+                <ProjectDetails v-for="(item, index) in filteredData" :key="index"
+                    :projectImage="item.image"
+                    :projectName="item.name" 
+                    :projectInfo="item.description" 
+                    :projectAltText="item.alt"
+                />
             </div>
         </section>
 
@@ -41,6 +39,11 @@ export default {
     data() {
         return {
             data: data
+        }
+    },
+    computed: {
+        filteredData() {
+            return this.data.filter(item => item.category === 'app');
         }
     },
     components: {
