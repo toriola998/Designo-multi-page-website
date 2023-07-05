@@ -50,23 +50,10 @@
         <section aria-label="Why you should choose designo">
             <div class="why-choose-wrapper">
                 <div class="why-choose-inner">
-                    <WhyChooseUs illustration="illustration-passionate.svg"
-                                serviceTitle="PASSIONATE"
-                                serviceInfo="Each project starts with an in-depth brand research to ensure
-                                we only create products that serve a purpose. We merge art, design, and
-                                technology into exciting new solutions." 
-                    />
-                    <WhyChooseUs illustration="illustration-resourceful.svg"
-                                serviceTitle="RESOURCEFUL"
-                                serviceInfo="Everything that we do has a strategic purpose. We use an agile 
-                                approach in all of our projects and value customer collaboration. It guarantees 
-                                superior results that fulfill our clients' needs." 
-                    />
-                    <WhyChooseUs illustration="illustration-friendly.svg"
-                                serviceTitle="FRIENDLY"
-                                serviceInfo=" We are a group of enthusiastic folks who know how to put people
-                                first. Our success depends on our customers, and we strive to give them 
-                                the best experience a company can provide." 
+                    <WhyChooseUs v-for="(item, index) in reasons" :key="index"
+                        :illustration="item.image"
+                        :serviceTitle="item.title"
+                        :serviceInfo="item.info" 
                     />
                 </div>
             </div>
@@ -82,6 +69,27 @@ import WhyChooseUs from './../components/WhyChooseUs.vue'
 
 export default {
     name: "Home",
+    data(){
+        return {
+            reasons: [
+                {
+                    image: 'illustration-passionate.svg',
+                    title: 'PASSIONATE',
+                    info: 'Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge art, design, and technology into exciting new solutions.'
+                },
+                {
+                    image: 'illustration-resourceful.svg',
+                    title: 'RESOURCEFUL',
+                    info: 'Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value customer collaboration. It guarantees superior results that fulfill our clients needs.'
+                },
+                {
+                    image: 'illustration-friendly.svg',
+                    title: 'FRIENDLY',
+                    info: 'We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.'
+                }
+            ]
+        }
+    },
     components: {
         OurServices,
         WhiteButton,
