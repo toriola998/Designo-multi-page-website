@@ -14,7 +14,7 @@
                         :projectInfo="item.description" 
                         :projectAltText="item.alt"
                     />
-            </div>
+                </div>
             </div>
         </section>
 

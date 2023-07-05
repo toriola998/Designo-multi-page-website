@@ -47,7 +47,9 @@
         <section aria-label="Why you should choose designo">
             <div class="why-choose-wrapper">
                 <div class="why-choose-inner">
-                    <WhyChooseUs v-for="(item, index) in reasons" :key="index"
+                    <WhyChooseUs 
+                        v-for="(item, index) in reasons" 
+                        :key="index"
                         :illustration="item.image"
                         :serviceTitle="item.title"
                         :serviceInfo="item.info" 

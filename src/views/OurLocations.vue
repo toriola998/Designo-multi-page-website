@@ -3,7 +3,9 @@
         <main>
             <div class="location-container">
                 <div>
-                <EachLocation v-for="(item, index) in locations" :key="index"
+                <EachLocation 
+                    v-for="(item, index) in locations" 
+                    :key="index"
                     :mapImage="item.image"
                     :mapAltText="item.alt"
                     :country="item.country"
