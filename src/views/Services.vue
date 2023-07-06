@@ -1,13 +1,13 @@
 <template>
     <header>
         <ServicesHeader 
-            title="App Design" 
-            description="We deliver eye-catching branding materials that are tailored to meet your business objectives." />
+            :title="service.title" 
+            :description="service.description" />
     </header>
     <main>
-        <section aria-label="some of the application designs done by Designo">
+        <section :aria-label="`some of the ${service.title} done by Designo`">
             <div class="projects-wrapper">
-                <ProjectDetails v-for="(item, index) in filteredData" :key="index"
+                <ProjectDetails v-for="(item, index) in service.portfolio" :key="index"
                     :projectImage="item.image"
                     :projectName="item.name" 
                     :projectInfo="item.description" 
@@ -18,11 +18,14 @@
 
         <section aria-label="Other services we render at Designo">
             <div class="our-services">
-                <router-link to="/web-design" class="web-design design">
-                    <OurServices service="WEB DESIGN" />
-                </router-link>
-                <router-link to="/graphic-design" class="graphic-design design">
-                    <OurServices service="GRAPHIC DESIGN" />
+                <router-link 
+                    v-for="(item, index) in service.otherServices" 
+                    :key="index"
+                    :to="`/services/${item.slug}`" 
+                    class="design" 
+                    :class="item.slug" 
+                    >
+                        <OurServices :service="item.service" />
                 </router-link>
             </div>
         </section>
@@ -35,15 +38,25 @@ import ServicesHeader from './../components/ServicesHeader.vue'
 import OurServices from './../components/OurServices.vue'
 import ProjectDetails from './../components/ProjectDetails.vue'
 export default {
-    name: 'App Design',
+    name: '',
     data() {
         return {
             data: data
         }
     },
     computed: {
-        filteredData() {
-            return this.data.filter(item => item.category === 'app');
+        // filteredData() {
+        //     return this.data.filter(item => item.category === 'app');
+        // },
+
+        slug() {
+            return this.$route.params.service
+        },
+
+        service() {
+            return this.data.find( (item) => {
+                   return item.slug == this.slug
+            })
         }
     },
     components: {

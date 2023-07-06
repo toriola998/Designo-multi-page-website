@@ -1,12 +1,10 @@
 import {createRouter, createWebHistory} from 'vue-router'
 
 import Home from './../views/Home.vue'
-import WebDesign from './../views/WebDesign.vue'
-import GraphicDesign from './../views/GraphicDesign.vue'
-import AppDesign from './../views/AppDesign.vue'
 import OurLocations from './../views/OurLocations.vue'
 import AboutUs from './../views/AboutUs.vue'
 import ContactUs from './../views/ContactUs.vue'
+import Services from './../views/Services.vue'
 
 const router = createRouter({
     history:  createWebHistory(),
@@ -23,25 +21,6 @@ const router = createRouter({
             name: 'Home',
             component: Home
         },
-
-        {
-            path: '/web-design',
-            name: 'Web Design',
-            component: WebDesign
-        },
-
-        {
-            path: '/graphic-design',
-            name: 'Graphic Design',
-            component: GraphicDesign
-        },
-
-        {
-            path: '/app-design',
-            name: 'App Design',
-            component: AppDesign
-        },
-
         {
             path: '/locations',
             name: 'Locations',
@@ -58,6 +37,12 @@ const router = createRouter({
             path: '/contact-us',
             name: 'Contact Us',
             component: ContactUs
+        },
+
+        {
+            path: '/services/:service',
+            name: 'Services',
+            component: Services
         }
     ]
 })

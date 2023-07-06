@@ -139,7 +139,7 @@ export default {
         -moz-column-gap: 1rem;
         row-gap: 2rem;
         justify-content: center;
-        padding: 7rem 7rem 0;
+        //padding: 7rem 7rem 0;
     }
 }
 

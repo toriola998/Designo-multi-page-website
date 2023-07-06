@@ -29,14 +29,14 @@
         <section aria-label="Services we render in Designo"> 
             <div class="services">
                 <div class="services-inner">
-                    <router-link to="/web-design" class="web-design design">
+                    <router-link to="services/web-design" class="web-design design">
                         <OurServices service="WEB DESIGN" />
                     </router-link>
                     <div>
-                        <router-link to="/app-design" class="app-design design">
+                        <router-link to="services/app-design" class="app-design design">
                             <OurServices service="APP DESIGN" />
                         </router-link>
-                        <router-link to="/graphic-design" class="graphic-design design">
+                        <router-link to="services/graphic-design" class="graphic-design design">
                             <OurServices service="GRAPHIC DESIGN" />
                         </router-link>
                     </div>
