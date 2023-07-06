@@ -45,15 +45,11 @@ export default {
         }
     },
     computed: {
-        // filteredData() {
-        //     return this.data.filter(item => item.category === 'app');
-        // },
-
         slug() {
             return this.$route.params.service
         },
 
-        service() {
+        service() { 
             return this.data.find( (item) => {
                    return item.slug == this.slug
             })
